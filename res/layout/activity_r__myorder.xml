@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    tools:context="com.huiyuan.networkhospital.module.main.registration.activity.R_PaymentActivity" >
+
+    <RelativeLayout
+        android:id="@+id/rl_r_myorder"
+        android:layout_width="fill_parent"
+        android:layout_height="46dp"
+        android:background="#74bfe6" >
+
+        <ImageButton
+            android:id="@+id/imgb_r_myorder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/ic_back22x40px" />
+
+        <TextView
+            android:id="@+id/tv_r_myorder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/tv_r_myorder"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_r_myorder"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/rl_r_myorder" >
+    </ListView>
+
+</RelativeLayout>

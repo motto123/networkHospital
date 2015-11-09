@@ -1,0 +1,203 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.huiyuan.networkhospital.module.main.hospital_introduce.activity.DoctorDetailsActivity" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#74bfe6" >
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_back22x40px" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/doctor_introduce"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlInputBox"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/relativeLayout1" >
+
+        <ImageView
+            android:id="@+id/ivMore1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/test_ic_doctor_img" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView3"
+            android:layout_below="@+id/textView3"
+            android:layout_marginTop="5dp"
+            android:text="@string/name"
+            android:textColor="#454545"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvDuty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView3"
+            android:layout_alignBottom="@+id/textView3"
+            android:layout_toRightOf="@+id/textView3"
+            android:text="办公室主任"
+            android:textColor="#454545"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvName2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView4"
+            android:layout_alignBottom="@+id/textView4"
+            android:layout_alignLeft="@+id/tvDuty"
+            android:text="张三"
+            android:textColor="#454545"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvCourse2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tvLevel2"
+            android:layout_alignTop="@+id/ivMore1"
+            android:text="内科"
+            android:textColor="#3b3b3b"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvLevel2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvCourse2"
+            android:layout_marginTop="11dp"
+            android:layout_toRightOf="@+id/ivMore1"
+            android:text="主治医生"
+            android:textColor="#454545"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tvLevel2"
+            android:layout_below="@+id/tvLevel2"
+            android:layout_marginTop="5dp"
+            android:text="@string/duty"
+            android:textColor="#454545"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/ivMore1"
+            android:layout_below="@+id/textView4"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/introduce" />
+
+        <TextView
+            android:id="@+id/tvIntroduce2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/ivMore1"
+            android:layout_below="@+id/tvTime"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="10dp"
+            android:text="精通外科"
+            android:textColor="#3b3b3b"
+            android:textSize="11dp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ImageView01"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="#ededed" />
+
+    <ImageView
+        android:id="@+id/ivRecord"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ImageView01"
+        android:layout_marginTop="20dp"
+        android:background="#ededed" />
+
+    <ImageView
+        android:id="@+id/ImageView02"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ivRecord"
+        android:layout_marginTop="75dp"
+        android:background="#ededed" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ivRecord"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="14sp"
+        android:textColor="#454545"
+        android:text="@string/Schedule" />
+
+    <TextView
+        android:id="@+id/tvSchedule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_below="@+id/textView5"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="8dp"
+        android:text="每周星期一"
+        android:textColor="#3b3b3b"
+        android:textSize="11sp" />
+
+    <Button
+        android:id="@+id/btPay"
+        android:layout_width="185dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/ImageView02"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bg_blue_circle"
+        android:visibility="gone"
+        android:textColor="#ffffff"
+        android:text="@string/make" />
+
+</RelativeLayout>

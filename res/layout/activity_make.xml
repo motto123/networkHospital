@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/rl_make_activity"
+        android:layout_width="fill_parent"
+        android:layout_height="46dp"
+        android:background="#74BFE6" >
+
+        <TextView
+            android:id="@+id/tv_make_activity_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/title_activity_make"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/imbt_make_activity_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/ic_back22x40px" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_make_activity"
+        android:layout_width="fill_parent"
+        android:layout_height="46dp"
+        android:layout_below="@id/rl_make_activity"
+        android:background="#f7f7f7"
+        android:gravity="center"
+        android:text="@string/tv_doctor_visit"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/bt_make_activity_chose_address"
+        android:layout_width="290dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/tv_make_activity"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_white_circle"
+        android:radius="8dp"
+        android:text="@string/bt_make_activity_chose" />
+
+    <TextView
+        android:id="@+id/tv_make_activity_address"
+        android:layout_width="290dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/bt_make_activity_chose_address"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/bg_gray_circle"
+        android:gravity="left"
+        android:paddingLeft="9dp"
+        android:paddingTop="11dp"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/bt_make_activity_chose_details"
+        android:layout_width="290dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/tv_make_activity_address"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_white_circle"
+       android:layout_marginTop="20dp"
+        android:radius="8dp"
+        android:text="@string/bt_make_activity_chose_details" />
+    <TextView
+        android:id="@+id/tv_make_activity_details"
+        android:layout_width="290dp"
+        android:layout_height="50dp"
+        android:paddingLeft="9dp"
+        android:layout_below="@id/bt_make_activity_chose_details"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:paddingTop="10dp"
+        android:background="@drawable/bg_gray_circle"
+        android:gravity="left"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/bt_make_activity_sendorder"
+        android:layout_width="150dp"
+        android:layout_height="42dp"
+        android:layout_below="@id/tv_make_activity_details"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="62dp"
+        android:background="@drawable/bg_blue_circle"
+        android:gravity="center"
+        android:text="@string/bt_make_activity_sendorder"
+        android:textColor="#ffffff"
+        android:textSize="14sp" />
+
+    <CheckBox
+        android:id="@+id/CB_make_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_make_activity_details"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:checked="true"
+        android:text="@string/CB_make_activity" />
+
+</RelativeLayout>

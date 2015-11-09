@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    tools:context="com.huiyuan.networkhospital.module.main.doctor_visit.activity.LookOverActivity" >
+
+    <RelativeLayout
+        android:id="@+id/rl_look_over_top"
+        android:layout_width="fill_parent"
+        android:layout_height="46dp"
+        android:background="#74BFE6" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/title_activity_look_over"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/imbt_look_over_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/ic_back22x40px" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_look_over_top"
+        android:layout_width="fill_parent"
+        android:layout_height="46dp"
+        android:layout_below="@id/rl_look_over_top"
+        android:background="#f7f7f7"
+        android:gravity="center"
+        android:text="@string/tv_look_over_top"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_look_over_name"
+        android:layout_width="290dp"
+        android:layout_height="115dp"
+        android:layout_below="@id/tv_look_over_top"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_gray_circle"
+        android:gravity="left"
+        android:paddingTop="10dp"
+        android:paddingLeft="9dp"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_look_over_address"
+        android:layout_width="290dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/tv_look_over_name"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_white_circle"
+        android:gravity="center"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/bt_particpation_disjoin"
+        android:layout_width="150dp"
+        android:layout_height="41dp"
+        android:layout_below="@id/tv_look_over_address"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/bg_blue_circle"
+        android:gravity="center"
+        android:text="@string/bt_particpation_disjoin"
+        android:textColor="#ffffff"
+        android:visibility="gone"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/bt_particpation_orderloading"
+        android:layout_width="150dp"
+        android:layout_height="41dp"
+        android:layout_below="@id/bt_particpation_disjoin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:background="@drawable/bg_blue_circle"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="@string/bt_particpation_orderloading"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_look_over_phone"
+        android:layout_width="290dp"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@+id/tv_look_over_address"
+        android:layout_below="@+id/tv_look_over_address"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/bg_white_circle"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textSize="12sp" />
+
+</RelativeLayout>

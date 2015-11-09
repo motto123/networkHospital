@@ -1,0 +1,262 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    tools:context="com.huiyuan.networkhospital.module.main.get_medicine.activity.Gm_PaymentActivity" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="#74bfe6" >
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_back22x40px" />
+
+        <TextView
+            android:id="@+id/tvTitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/indent_confirm"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/relativeLayout1" >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="#FFFFFF" >
+
+            <Button
+                android:id="@+id/btPayment"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="#FF8000"
+                android:text="@string/payment"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/btPayment"
+                android:layout_alignBottom="@+id/btPayment"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:text="@string/total"
+                android:textColor="#FF0000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="11dp"
+                android:layout_toRightOf="@+id/textView10"
+                android:text="0元"
+                android:textColor="#FF0000"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlMore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/relativeLayout4"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="50dp"
+            android:background="#FFFFFF"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp" >
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="医院联系人:"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvNameContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tvName"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/tvName"
+                android:text="张芳"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/etNameContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tvName"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/tvName"
+                android:background="@null"
+                android:hint="请输入收货人姓名"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvTel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvName"
+                android:layout_below="@+id/tvName"
+                android:layout_marginTop="10dp"
+                android:text="联系电话:"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvTelContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tvTel"
+                android:layout_alignLeft="@+id/tvNameContent"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/tvTel"
+                android:maxLength="11"
+                android:numeric="integer"
+                android:text="028-66892586"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/etTelContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tvTel"
+                android:layout_alignLeft="@+id/etNameContent"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/tvTel"
+                android:background="@null"
+                android:hint="请输入收货人电话号码"
+                android:maxLength="11"
+                android:numeric="integer"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/etReceivingAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/etNameContent"
+                android:layout_alignTop="@+id/tv1"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/tv1"
+                android:background="@null"
+                android:hint="请输入收货人地址"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvReceivingAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvNameContent"
+                android:layout_alignTop="@+id/tv1"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/tv1"
+                android:text="四川省成都市一环路西一段132号"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTel"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/receiving_address"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rlMore"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="@string/hospital_address"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:id="@+id/rlInputBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textView3"
+            android:layout_alignParentLeft="true"
+            android:background="#FFFFFF" >
+
+            <RadioGroup
+                android:id="@+id/radioGroup1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/radio0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/self_take" />
+
+                <RadioButton
+                    android:id="@+id/radio1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/express" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvCourse1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:text="@string/post_way"
+                android:textColor="#FF000000"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/lvMedicine"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_above="@+id/rlInputBox"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" >
+        </ListView>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.huiyuan.networkhospital.module.main.doctor_visit.fragment.Dv_fragment_un" >
+
+    <LinearLayout
+        android:id="@+id/ll_doctor_visit_un"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="#d4d4d4"
+        android:orientation="horizontal" >
+
+        <Spinner
+            android:id="@+id/sp_doctor_visit_un1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:dropDownWidth="800dp"
+            android:background="@drawable/bg_sp1" />
+					
+        <Spinner
+            android:id="@+id/sp_doctor_visit_un2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:dropDownWidth="800dp"
+            android:background="@drawable/bg_sp1"/>
+
+        <Spinner
+            android:id="@+id/sp_doctor_visit_un3"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:dropDownWidth="800dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_sp1"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_doctor_visit_un"
+        android:layout_width="fill_parent"
+        android:layout_height="46dp"
+        android:layout_below="@id/ll_doctor_visit_un"
+        android:background="#f7f7f7"
+        android:gravity="center"
+        android:text="@string/tv_doctor_visit"
+        android:textSize="15sp" />
+
+    <com.huiyuan.networkhospital.common.widget.XListView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#f7f7f7"
+        android:divider="#f7f7f7"
+        android:dividerHeight="10dp"
+        android:layout_below="@id/tv_doctor_visit_un"
+        android:footerDividersEnabled="false"
+        android:listSelector="@android:color/transparent" />
+</RelativeLayout>

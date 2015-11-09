@@ -1,0 +1,229 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    tools:context="com.huiyuan.networkhospital.module.more.MoreActivity" >
+
+    <RelativeLayout
+        android:id="@+id/rlytTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="46dp"
+        android:background="#74bfe6" >
+
+        <ImageButton
+            android:id="@+id/ibtnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/ic_back22x40px" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/more"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llytmore"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlytTitle"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rlytAboutUs"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_white_straight" >
+
+            <ImageView
+                android:id="@+id/ivAboutUs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/ic_more_about_us" />
+
+            <TextView
+                android:id="@+id/tvAboutUs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/ivAboutUs"
+                android:text="@string/aboutUs"
+                android:textColor="#3b3b3b"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlytFeedback"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_white_straight" >
+
+            <ImageView
+                android:id="@+id/ivFeedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/ic_more_feedback" />
+
+            <TextView
+                android:id="@+id/tvFeedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/ivFeedback"
+                android:text="@string/feedback"
+                android:textColor="#3b3b3b"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlytCellUs"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_white_straight" >
+
+            <ImageView
+                android:id="@+id/ivCellUs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/ic_more_call_us" />
+
+            <TextView
+                android:id="@+id/tvCellUs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/ivCellUs"
+                android:text="@string/cellUs"
+                android:textColor="#3b3b3b"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlytShare"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:visibility="gone"
+            android:background="@drawable/bg_white_straight" >
+
+            <ImageView
+                android:id="@+id/ivShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/ic_more_share" />
+
+            <TextView
+                android:id="@+id/tvShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/ivShare"
+                android:text="@string/societyShare"
+                android:textColor="#3b3b3b"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlytUpdate"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_white_straight" >
+
+            <ImageView
+                android:id="@+id/ivUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/ic_more_update" />
+
+            <TextView
+                android:id="@+id/tvUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/ivUpdate"
+                android:text="@string/update"
+                android:textColor="#3b3b3b"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlytRemoveCache"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:visibility="gone"
+            android:background="@drawable/bg_white_straight" >
+
+            <ImageView
+                android:id="@+id/ivRemoveCache"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/ic_more_remove_cache" />
+
+            <TextView
+                android:id="@+id/tvRemoveCache"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/ivRemoveCache"
+                android:text="@string/removeCache"
+                android:textColor="#3b3b3b"
+                android:textSize="13sp" />
+            <ImageView 
+                android:id="@+id/ivLine"
+                android:layout_width="fill_parent"
+                android:layout_height="2px"
+                android:layout_alignParentBottom="true"
+                android:background="#d4d4d4"
+                />
+            <TextView
+                android:id="@+id/ivRemoveCacheSee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="17dp"
+                android:text="@string/fileSize"
+                android:textColor="#3b3b3b"
+                android:textSize="13sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btBackLogin"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/llytmore"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="57dp"
+        android:background="@drawable/bg_blue_circle"
+        android:text="@string/backThisLogin"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+</RelativeLayout>

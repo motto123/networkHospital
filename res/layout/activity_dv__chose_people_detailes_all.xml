@@ -1,0 +1,216 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    tools:context="com.huiyuan.networkhospital.module.main.doctor_visit.activity.Dv_ChosePeopleDetailesActivity" >
+
+    <RelativeLayout
+        android:id="@+id/rl_chose_people_detailes"
+        android:layout_width="fill_parent"
+        android:layout_height="46dp"
+        android:background="#74BFE6" >
+
+        <TextView
+            android:id="@+id/tv_chose_people_detailes_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/title_activity_dv__chose_people_dtailes"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/imbt_chose_people_detailes_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/ic_back22x40px" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lr_chose_people_detailes"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_chose_people_detailes"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/lr_chose_people_detailes_name"
+            android:layout_width="fill_parent"
+            android:layout_height="39dp"
+            android:background="@null"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:paddingLeft="8dp"
+                android:paddingTop="10dp"
+                android:text="@string/lr_chose_people_detailes_name"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/ed_chose_people_detailes_name"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#d4d4d4"
+            android:src="@null" />
+
+        <LinearLayout
+            android:id="@+id/lr_chose_people_detailes_sex"
+            android:layout_width="fill_parent"
+            android:layout_height="39dp"
+            android:background="@null"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:paddingLeft="8dp"
+                android:paddingTop="10dp"
+                android:text="@string/lr_chose_people_detailes_sex"
+                android:textSize="16sp" />
+
+            
+            <RadioGroup
+                android:id="@+id/rbtnGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_toRightOf="@+id/tvSexTitle"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/radioMale"
+                    style="@style/CustomRadioBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:paddingLeft="15dp"
+                    android:text="@string/man"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radioFemale"
+                    style="@style/CustomRadioBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:paddingLeft="15dp"
+                    android:text="@string/woman"
+                    android:textSize="16sp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#d4d4d4"
+            android:src="@null" />
+
+        <LinearLayout
+            android:id="@+id/lr_chose_people_detailes_age"
+            android:layout_width="fill_parent"
+            android:layout_height="39dp"
+            android:background="@null"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@null"
+                android:paddingLeft="8dp"
+                android:paddingTop="10dp"
+                android:text="@string/lr_chose_people_detailes_age"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/ed_chose_people_detailes_age"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:numeric="integer"
+                android:maxLength="3"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#d4d4d4"
+            android:src="@null" />
+
+        <LinearLayout
+            android:id="@+id/lr_chose_people_detailes_phone"
+            android:layout_width="fill_parent"
+            android:layout_height="39dp"
+            android:background="@null"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:paddingLeft="8dp"
+                android:paddingTop="10dp"
+                android:text="@string/lr_chose_people_detailes_phone"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/ed_chose_people_detailes_phone"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:maxLength="11"
+                android:numeric="integer"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#d4d4d4"
+            android:src="@null" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/ed_chose_people_detailes_deta"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/lr_chose_people_detailes"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_gray_gray_straight"
+        android:gravity="top|left"
+        android:hint="@string/ed_chose_people_detailes_deta"
+        android:paddingLeft="9dp"
+        android:paddingTop="15dp"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/bt_chose_people_detailes_deta_sum"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/ed_chose_people_detailes_deta"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/bg_blue_circle"
+        android:gravity="center"
+        android:text="@string/bt_chose_people_detailes_deta_sum"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>

@@ -1,0 +1,176 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    tools:context="com.huiyuan.networkhospital.module.more.ShareActivity" >
+
+   <RelativeLayout
+        android:id="@+id/rlytTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="46dp"
+        android:background="#74bfe6" >
+
+        <ImageButton
+            android:id="@+id/ibtnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/ic_back22x40px" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/societyShare"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+   <LinearLayout
+        android:id="@+id/llytmore"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlytTitle"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rlytWeChat"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_white_straight" >
+
+            <ImageView
+                android:id="@+id/ivWeChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:src="@drawable/ic_we_chat" />
+
+            <TextView
+                android:id="@+id/tvWeChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:layout_toRightOf="@id/ivWeChat"
+                android:text="@string/WeChat"
+                android:textColor="#3b3b3b"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlytCircleOfFriends"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_white_straight" >
+
+            <ImageView
+                android:id="@+id/ivCircleOfFriends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:src="@drawable/ic_friends_circle" />
+
+            <TextView
+                android:id="@+id/tvCircleOfFriends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:layout_toRightOf="@id/ivCircleOfFriends"
+                android:text="@string/circleOfFriends"
+                android:textColor="#3b3b3b"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlytSinaBlog"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_white_straight" >
+
+            <ImageView
+                android:id="@+id/ivSinaBlog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:src="@drawable/ic_weibo" />
+
+            <TextView
+                android:id="@+id/tvSinaBlog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:layout_toRightOf="@id/ivSinaBlog"
+                android:text="@string/SinaBlog"
+                android:textColor="#3b3b3b"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlytQQZone"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_white_straight" >
+
+            <ImageView
+                android:id="@+id/ivQQZone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:src="@drawable/ic_qzone" />
+
+            <TextView
+                android:id="@+id/tvQQZone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:layout_toRightOf="@id/ivQQZone"
+                android:text="@string/QQZone"
+                android:textColor="#3b3b3b"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlytQQFriends"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_white_straight" >
+
+            <ImageView
+                android:id="@+id/ivQQFriends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:src="@drawable/ic_q" />
+
+            <TextView
+                android:id="@+id/tvQQFriends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:layout_toRightOf="@id/ivQQFriends"
+                android:text="@string/QQFriends"
+                android:textColor="#3b3b3b"
+                android:textSize="16sp" />
+            <ImageView 
+                android:id="@+id/ivLine"
+                android:layout_width="fill_parent"
+                android:layout_height="2px"
+                android:layout_alignParentBottom="true"
+                android:background="#d4d4d4"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

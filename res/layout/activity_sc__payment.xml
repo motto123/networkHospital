@@ -1,0 +1,254 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.huiyuan.networkhospital.module.main.sport_coaching.activity.Sc_PaymentActivity" >
+
+     <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#74bfe6" >
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_back22x40px" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/indent_submit"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlInputBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/relativeLayout1" >
+
+        <ImageView
+            android:id="@+id/ivMore1"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="27dp"
+            android:src="@drawable/ic_sc_pay" />
+
+        <TextView
+            android:id="@+id/tvCourse2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ivMore1"
+            android:layout_toRightOf="@+id/ivMore1"
+            android:text="@string/sport_coaching"
+            android:textColor="#3b3b3b"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:textColor="#FF0000"
+             />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/tvTime"
+            android:textColor="#FF0000"
+            android:text="@string/subtotal" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tvCourse2"
+            android:layout_below="@+id/tvCourse2"
+            android:text="@string/private_coach" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvCourse2"
+            android:layout_toRightOf="@+id/textView3"
+            android:text="王某某" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView3"
+            android:layout_below="@+id/textView3"
+            android:paddingBottom="20dp"
+            android:text="@string/address" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView5"
+            android:layout_alignBottom="@+id/textView5"
+            android:layout_alignRight="@+id/textView2"
+            android:layout_toRightOf="@+id/textView5"
+            android:lines="2"
+            android:text="四川省成都市" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivRecord"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ImageView01"
+        android:layout_marginTop="20dp"
+        android:background="#ededed" />
+
+    <ImageView
+        android:id="@+id/ImageView01"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/rlInputBox"
+        android:background="#ededed" />
+
+    <RelativeLayout
+        android:id="@+id/rlMore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ivRecord"
+        android:background="#FFFFFF" >
+
+        <TextView
+            android:id="@+id/tvIntroduce1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="10dp"
+            android:text="医院地址:" />
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tvIntroduce1"
+            android:layout_below="@+id/tvIntroduce1"
+            android:layout_marginTop="5dp"
+            android:text="医院联系人:" />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/TextView01"
+            android:layout_below="@+id/TextView01"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="20dp"
+            android:text="联系电话:" />
+
+        <TextView
+            android:id="@+id/tvContacts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/TextView01"
+            android:layout_alignTop="@+id/tvIntroduce1"
+            android:layout_marginLeft="11dp"
+            android:layout_toRightOf="@+id/TextView01"
+            android:text="四川省成都市一环路西一段132附28号" />
+
+        <TextView
+            android:id="@+id/tvPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/TextView01"
+            android:layout_alignBottom="@+id/TextView01"
+            android:layout_alignLeft="@+id/tvContacts"
+            android:text="张芳" />
+
+        <TextView
+            android:id="@+id/tvReceivingAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv1"
+            android:layout_alignBottom="@+id/tv1"
+            android:layout_alignLeft="@+id/tvPhone"
+            android:lines="2"
+            android:text="028-66892586" />
+
+        <ImageView
+            android:id="@+id/ImageView02"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignBottom="@+id/tvReceivingAddress"
+            android:layout_alignParentLeft="true"
+            android:background="#ededed" />
+
+    </RelativeLayout>
+<RelativeLayout
+            android:id="@+id/rlMoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/bg_white_gray_straight"
+             >
+
+            <Button
+                android:id="@+id/btScPayment"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="#FF8000"
+                android:textColor="#ffffff"
+                android:text="@string/payment" />
+
+            <TextView
+                android:id="@+id/tvScPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/btScPayment"
+                android:layout_alignBottom="@id/btScPayment"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:text="@string/total"
+                android:textColor="#FF0000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvScTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="11dp"
+                android:layout_toRightOf="@id/tvScPayment"
+                android:textColor="#FF0000"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,183 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.huiyuan.networkhospital.module.main.fragment.PreventionFragment" >
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="160dp" >
+
+        <com.huiyuan.networkhospital.common.customview.MyImgScroll
+            android:id="@+id/myPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/vb"
+            android:columnCount="3"
+            android:rowCount="3" />
+
+        <LinearLayout
+            android:id="@+id/ovalLayout"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/relativeLayout1"
+        android:layout_centerHorizontal="true"
+        android:background="#f7f7f7"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f7f7f7"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btGuide"
+                style="@style/fragment_typeface"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawableTop="@drawable/ic_guide01"
+                android:paddingLeft="20dp"
+                android:paddingTop="5dp"
+                android:text="@string/guide01"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btMedication"
+                style="@style/fragment_typeface"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawableTop="@drawable/ic_medication02"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="5dp"
+                android:text="@string/medication02"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btCourse"
+                style="@style/fragment_typeface"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawableTop="@drawable/ic_course03"
+                android:paddingRight="20dp"
+                android:paddingTop="5dp"
+                android:text="@string/course03"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f7f7f7" >
+
+            <Button
+                android:id="@+id/btRegistered"
+                style="@style/fragment_typeface"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawableTop="@drawable/ic_registered04"
+                android:paddingLeft="20dp"
+                android:paddingTop="5dp"
+                android:text="@string/registered04"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btVisit"
+                style="@style/fragment_typeface"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawableTop="@drawable/ic_visit05"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="5dp"
+                android:text="@string/visit05"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btLBS"
+                style="@style/fragment_typeface"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawableTop="@drawable/ic_lbs06"
+                android:paddingRight="20dp"
+                android:paddingTop="5dp"
+                android:text="@string/lbs06"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f7f7f7" >
+
+            <Button
+                android:id="@+id/btCenter"
+                style="@style/fragment_typeface"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawableTop="@drawable/ic_center07"
+                android:paddingTop="5dp"
+                android:paddingLeft="20dp"
+                android:text="@string/center07"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btMessage"
+                style="@style/fragment_typeface"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawableTop="@drawable/ic_message08"
+                android:paddingTop="5dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/message08"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btMyRecord"
+                style="@style/fragment_typeface"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawableTop="@drawable/ic_my_record09"
+                android:paddingRight="20dp"
+                android:paddingTop="5dp"
+                android:text="@string/my_record09"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

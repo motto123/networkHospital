@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.huiyuan.networkhospital.module.main.hospital_introduce.fragment.DoctorIntroducedFragment" >
+
+    <RelativeLayout
+        android:id="@+id/rlDoctor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout1" >
+
+        <LinearLayout
+            android:id="@+id/ll_Doctor"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="#d4d4d4"
+            android:visibility="gone"
+            android:orientation="horizontal" >
+
+            <Spinner
+                android:id="@+id/spiSelect1"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_weight="200"
+                android:background="@drawable/bg_sp3"
+                android:dropDownWidth="800dp"
+                android:gravity="center" />
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="#b2b1b1" />
+
+            <Spinner
+                android:id="@+id/spiSelect2"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_weight="200"
+                android:background="@drawable/bg_sp3"
+                android:dropDownWidth="800dp"
+                android:gravity="center" />
+        </LinearLayout>
+
+     <ListView
+        android:id="@+id/listviewfragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/ll_Doctor"
+        android:background="#f7f7f7"
+        android:divider="#f7f7f7"
+        android:dividerHeight="10dp"
+        android:footerDividersEnabled="false"
+        android:listSelector="@android:color/transparent" 
+        />
+    </RelativeLayout>
+
+</RelativeLayout>

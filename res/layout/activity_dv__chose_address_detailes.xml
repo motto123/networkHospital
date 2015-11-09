@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    tools:context="com.huiyuan.networkhospital.module.main.doctor_visit.activity.Dv_ChosePeopleDetailesActivity" >
+
+    <RelativeLayout
+        android:id="@+id/rl_chose_address"
+        android:layout_width="fill_parent"
+        android:layout_height="46dp"
+        android:background="#74BFE6" >
+
+        <TextView
+            android:id="@+id/tv_chose_address_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/title_activity_dv__chose_address"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/imbt_chose_address_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/ic_back22x40px" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_bt_chose_address_deta"
+        android:layout_width="fill_parent"
+        android:layout_height="140dp"
+        android:layout_below="@id/rl_chose_address"
+        android:background="#d4d4d4" >
+
+        <LinearLayout
+            android:id="@+id/ll_bt_chose_address_deta"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="#d4d4d4"
+            android:orientation="horizontal" >
+
+            <Spinner
+                android:id="@+id/sp_chose_address_deta1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_sp1"
+                android:dropDownWidth="800dp" />
+
+            <Spinner
+                android:id="@+id/sp_chose_address_deta2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_sp1"
+                android:dropDownWidth="800dp" />
+
+            <Spinner
+                android:id="@+id/sp_chose_address_deta3"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_sp1"
+                android:dropDownWidth="800dp" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/et_chose_address_deta"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/ll_bt_chose_address_deta"
+            android:background="@drawable/bg_gray_gray_straight"
+            android:gravity="top|left"
+            android:hint="@string/et_chose_address_deta_hint"
+            android:paddingLeft="14dp"
+            android:paddingTop="9dp"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bt_chose_address_deta_sum"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/rl_bt_chose_address_deta"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="145dp"
+        android:background="@drawable/bg_blue_circle"
+        android:gravity="center"
+        android:text="@string/bt_chose_address_save"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>

@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.huiyuan.networkhospital"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21" />
+
+    <!-- log打印 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 摄像机权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <!-- 录音权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- sdCard权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 百度开发权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 用以设置前台是否显示通知 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 百度开发权限 -->
+
+
+    <!-- 友盟消息推送权限   注释:和百度开发相同的权限已经删除 -->
+    <!-- 必选 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!--
+【必选】用以设置前台是否显示通知>
+<uses-permission android:name="android.permission.GET_TASKS" /><<<<<<< .mine
+=======
+>>>>>>> .r762
+    -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 可选 -->
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- 友盟消息推送权限 -->
+
+
+    <!-- 环信权限start -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- 环信权限end -->
+    <!--
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="5vcYmZzYv7WaGZtBcFMykvpX" />
+    -->
+
+    <application
+        android:name=".NApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_app_user"
+        android:label="@string/app_name"
+        android:theme="@style/Theme_NoTitle" >
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="3xUmjCOkAGwH4EGusCYbIvdK" />
+
+        <activity
+            android:name=".module.main.MainActivity_"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance" >
+        </activity>
+        <activity
+            android:name=".module.LoadingActivity_"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".module.usermanager.LoginActivity_"
+            android:label="@string/title_activity_login" >
+        </activity>
+        <activity
+            android:name=".module.usermanager.RegisterActivity_"
+            android:label="@string/title_activity_register" >
+        </activity>
+        <activity
+            android:name=".module.usermanager.MatchSMSActivity_"
+            android:label="@string/title_activity_match_sms" >
+        </activity>
+        <activity
+            android:name=".module.main.VideoRecordActivity_"
+            android:label="@string/title_activity_video_record" >
+        </activity>
+        <activity
+            android:name=".module.main.case_history.activity.CaseHistoryActivity_"
+            android:label="@string/title_activity_case_history" >
+        </activity>
+        <activity
+            android:name=".module.main.case_history.activity.CaseHistoryDetailsActivity_"
+            android:label="@string/title_activity_case_history_details" >
+        </activity>
+        <activity
+            android:name=".module.main.doctor_visit.activity.DoctorVisitActivity_"
+            android:label="@string/title_activity_doctor_visit"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name=".module.main.doctor_visit.activity.MakeActivity_"
+            android:label="@string/title_activity_make" >
+        </activity>
+        <activity
+            android:name=".module.main.doctor_visit.activity.ParticipationActivity_"
+            android:label="@string/title_activity_participation" >
+        </activity>
+        <activity
+            android:name=".module.main.doctor_visit.activity.LookOverActivity_"
+            android:label="@string/title_activity_look_over" >
+        </activity>
+        <activity
+            android:name=".module.main.doctor_visit.activity.Dv_SubmitSucceedActivity_"
+            android:label="@string/title_activity_submit_succeed" >
+        </activity>
+        <activity
+            android:name=".module.main.get_medicine.activity.EvaluateActivity_"
+            android:label="@string/title_activity_evaluate" >
+        </activity>
+        <activity
+            android:name=".module.main.sport_coaching.activity.EvaluateActivity_"
+            android:label="@string/title_activity_evaluate" >
+        </activity>
+        <activity
+            android:name=".module.main.doctor_visit.activity.Dv_PaymentActivity_"
+            android:label="@string/title_activity_pay" >
+        </activity>
+        <activity
+            android:name=".module.main.doctor_visit.activity.MakeDetailsActivity_"
+            android:label="@string/title_activity_make_details" >
+        </activity>
+        <activity
+            android:name=".module.main.get_medicine.activity.GetMedicineActivity_"
+            android:label="@string/title_activity_get_medicine" >
+        </activity>
+        <activity
+            android:name=".module.main.get_medicine.activity.Gm_ChatActivity_"
+            android:label="@string/title_activity_get_medicine" >
+        </activity>
+        <activity
+            android:name=".module.main.get_medicine.activity.SelectDoctorActivity_"
+            android:label="@string/title_activity_select_doctor" >
+        </activity>
+        <activity
+            android:name=".module.main.get_medicine.activity.Gm_PaymentActivity_"
+            android:label="@string/title_activity_gm__payment" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- app id -->
+                <data android:scheme="wx6257d1eb0c0d7756" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".module.main.get_medicine.activity.Gm_SubmitSucceedActivity_"
+            android:label="@string/title_activity_gm__submit_succeed" >
+        </activity>
+        <activity
+            android:name=".module.main.hospital_introduce.activity.HospitalIntroduceActivity_"
+            android:label="@string/title_activity_hosbital_introduce" >
+        </activity>
+        <activity
+            android:name=".module.main.hospital_introduce.activity.DoctorDetailsActivity_"
+            android:label="@string/title_activity_doctor_details" >
+        </activity>
+        <activity
+            android:name=".module.main.hospital_introduce.activity.DepartmentsDetailsActivity_"
+            android:label="@string/title_activity_departments_details" >
+        </activity>
+        <activity
+            android:name=".module.main.hospital_LBS.activity.HospitalLBSActivity"
+            android:label="@string/title_activity_hospital_lbs" >
+        </activity>
+        <activity
+            android:name=".module.main.message.activity.MessageListActivity_"
+            android:label="@string/title_activity_message_list" >
+        </activity>
+        <activity
+            android:name=".module.main.message.activity.MessageDetailsActivity_"
+            android:label="@string/title_activity_message_details" >
+        </activity>
+        <activity
+            android:name=".module.main.registration.activity.RegistrationActivity_"
+            android:label="@string/title_activity_registration"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name=".module.main.registration.activity.R_PaymentActivity_"
+            android:label="@string/title_activity_r__payment" >
+        </activity>
+        <activity
+            android:name=".module.main.registration.activity.RegisterDetailActivity_"
+            android:label="@string/title_activity_register_detail" >
+        </activity>
+        <activity
+            android:name=".module.main.registration.activity.DoctorList_"
+            android:label="@string/title_activity_r__payment" >
+        </activity>
+        <activity
+            android:name=".module.main.registration.activity.CourseList_"
+            android:label="@string/title_activity_r__payment" >
+        </activity>
+        <activity
+            android:name=".module.main.rehabilitation_tutorial.activity.RehabilitationTutorialActivity_"
+            android:label="@string/title_activity_rehabilitation_tutorial" >
+        </activity>
+        <activity
+            android:name=".module.main.rehabilitation_tutorial.activity.PlayerActivity_"
+            android:label="@string/title_activity_player" >
+        </activity>
+        <activity
+            android:name=".module.main.rehabilitation_tutorial.activity.ImageTextTutorialActivity_"
+            android:label="@string/title_activity_image_text_tutorial" >
+        </activity>
+        <activity
+            android:name=".module.main.sport_coaching.activity.SportCoachingActivity_"
+            android:label="@string/title_activity_sport_coaching"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name=".module.main.sport_coaching.activity.SelectCoach_"
+            android:label="@string/title_activity_sport_coaching" >
+        </activity>
+        <activity
+            android:name=".module.main.sport_coaching.activity.Sc_PaymentActivity_"
+            android:label="@string/title_activity_sc__payment" >
+        </activity>
+        <activity
+            android:name=".module.main.sport_coaching.activity.Sc_PaySucceedActivity_"
+            android:label="@string/title_activity_sc__pay_succeed" >
+        </activity>
+        <activity
+            android:name=".module.main.hospital_introduce.activity.HosbitalIntroduceActivity_"
+            android:label="@string/title_activity_hosbital_introduce" >
+        </activity>
+        <activity
+            android:name=".module.main.doctor_visit.activity.Dv_ChosePeopleActivity_"
+            android:label="@string/title_activity_dv__chose_people" >
+        </activity>
+        <activity
+            android:name=".module.main.doctor_visit.activity.Dv_ChosePeopleDetailesActivity_"
+            android:label="@string/title_activity_dv__chose_people" >
+        </activity>
+        <activity
+            android:name=".module.main.doctor_visit.activity.Dv_ChoseAddressActivity_"
+            android:label="@string/title_activity_dv__chose_people" >
+        </activity>
+        <activity
+            android:name=".module.main.doctor_visit.activity.Dv_ChoseAddressDetailesActivity_"
+            android:label="@string/title_activity_dv__chose_address_detailes" >
+        </activity>
+        <activity
+            android:name=".module.user.MyActivity_"
+            android:label="@string/title_activity_my" >
+        </activity>
+        <activity
+            android:name=".module.user.UserInfoActivity_"
+            android:label="@string/title_activity_user_info"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name=".module.user.DataEditeActivity_"
+            android:label="@string/title_activity_data_edite" >
+        </activity>
+        <activity
+            android:name=".module.user.AlterSucceedActivity_"
+            android:label="@string/title_activity_alter_succeed" >
+        </activity>
+        <activity
+            android:name=".module.user.AlterPWActivity_"
+            android:label="@string/title_activity_alter_pw" >
+        </activity>
+        <activity
+            android:name=".module.user.HospitalsListActivity_"
+            android:label="@string/title_activity_hospitals_list" >
+        </activity>
+        <activity
+            android:name=".module.user.HospitalsDetailsActivity_"
+            android:label="@string/title_activity_hospitals_details" >
+        </activity>
+        <activity
+            android:name=".module.user.SystemInfoActivity_"
+            android:label="@string/title_activity_system_info" >
+        </activity>
+        <activity
+            android:name=".module.user.SystemInfoDetailsActivity_"
+            android:label="@string/title_activity_system_info_details" >
+        </activity>
+        <activity
+            android:name=".module.user.IndentListActivity_"
+            android:label="@string/title_activity_indent_list" >
+        </activity>
+        <activity
+            android:name=".module.user.MyCollectActivity_"
+            android:label="@string/title_activity_my_collect" >
+        </activity>
+        <activity
+            android:name=".module.more.MoreActivity_"
+            android:label="@string/title_activity_more"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name=".module.more.AbautUsActivity_"
+            android:label="@string/title_activity_abaut_us" >
+        </activity>
+        <activity
+            android:name=".module.more.FeedbackActivity_"
+            android:label="@string/title_activity_feedback" >
+        </activity>
+        <activity
+            android:name=".module.more.ContactUsActivity_"
+            android:label="@string/title_activity_contact_us" >
+        </activity>
+        <activity
+            android:name=".module.more.ShareActivity_"
+            android:label="@string/title_activity_share" >
+        </activity>
+        <activity
+            android:name=".module.more.UpdateVersionActivity_"
+            android:label="@string/title_activity_update_version" >
+        </activity>
+        <activity
+            android:name=".module.more.ClearCacheActivity_"
+            android:label="@string/title_activity_clear_cache" >
+        </activity>
+        <activity
+            android:name=".module.main.get_medicine.activity.CanversationActivity_"
+            android:label="@string/title_activity_canversation" >
+        </activity>
+        <activity
+            android:name=".module.main.doctor_visit.fragment.Dv_fragment_un_"
+            android:label="@string/title_activity_dv_fragment_un" >
+        </activity>
+        <activity
+            android:name=".module.main.doctor_visit.fragment.Dv_fragment_on_"
+            android:label="@string/title_activity_dv_fragment_on" >
+        </activity>
+        <activity
+            android:name=".module.main.get_medicine.fragment.Gm_ing_"
+            android:label="@string/title_activity_gm_ing" >
+        </activity>
+        <activity
+            android:name=".module.main.get_medicine.fragment.Gm_end_"
+            android:label="@string/title_activity_gm_end" >
+        </activity>
+        <activity
+            android:name=".module.main.sport_coaching.activity.Sc_ChatActivity_"
+            android:label="@string/title_activity_sc__chat" >
+        </activity>
+        <activity
+            android:name=".module.main.message.fragment.MsHospital_"
+            android:label="@string/title_activity_ms_hospital" >
+        </activity>
+        <activity
+            android:name=".module.main.message.fragment.MsSystem_"
+            android:label="@string/title_activity_ms_system" >
+        </activity>
+        <activity
+            android:name=".module.usermanager.ForgetActivity_"
+            android:label="@string/title_activity_forget" >
+        </activity>
+        <activity
+            android:name=".module.user.ChoseAddress_"
+            android:label="@string/title_activity_chose_address" >
+        </activity>
+        <activity
+            android:name=".module.main.get_medicine.activity.Gm_checkprescriptionActivity_"
+            android:label="@string/title_activity_gm_checkprescription" >
+        </activity>
+        <activity
+            android:name=".module.user.DialogActivity_"
+            android:label="@string/title_activity_apply_dialog"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+            <activity
+            android:name=".module.user.activity.SCIndentActivity_"
+            android:label="@string/title_activity_scindent" >
+        </activity>
+
+        <!-- 友盟消息推送 -->
+        <!-- 监听通知点击或者忽略处理的广播 -->
+        <receiver
+            android:name="com.umeng.message.NotificationProxyBroadcastReceiver"
+            android:exported="false" >
+        </receiver>
+
+        <!-- 监听开机运行、网络连接变化、卸载的广播 -->
+        <receiver
+            android:name="com.umeng.message.SystemReceiver"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 监听消息到达的广播 -->
+        <receiver
+            android:name="com.umeng.message.MessageReceiver"
+            android:exported="false"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.RECEIVE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 监听宿主选举的广播 -->
+        <receiver
+            android:name="com.umeng.message.ElectionReceiver"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.ELECTION_RESULT_V4" />
+
+                <category android:name="umeng" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 监听注册的广播 -->
+        <!-- com.huiyuan.networkhospital字符串需要替换成本应用的应用包名 -->
+        <receiver
+            android:name="com.umeng.message.RegistrationReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.huiyuan.networkhospital.intent.action.COMMAND" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.umeng.message.UmengMessageBootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <!-- 可以根据需要自行设置 android:label 中的服务名 ： -->
+
+
+        <!-- Umeng的长连服务，用来建立推送的长连接的 -->
+        <!-- com.huiyuan.networkhospital字符串需要替换成本应用的应用包名 -->
+        <service
+            android:name="com.umeng.message.UmengService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="com.huiyuan.networkhospital.intent.action.START" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.huiyuan.networkhospital.intent.action.COCKROACH" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.PING_V4" />
+
+                <category android:name="umeng" />
+            </intent-filter>
+        </service>
+
+        <!-- Umeng的消息接收服务 -->
+        <service
+            android:name="com.umeng.message.UmengIntentService"
+            android:process=":push" />
+
+        <!-- Umeng的消息路由服务 -->
+        <service
+            android:name="com.umeng.message.UmengMessageIntentReceiverService"
+            android:exported="true"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="org.android.agoo.client.MessageReceiverService" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.android.agoo.client.ElectionReceiverService" />
+            </intent-filter>
+        </service>
+
+        <!-- v2.4.1添加的Service，Umeng的消息接收后的处理服务 -->
+        <service
+            android:name="com.umeng.message.UmengMessageCallbackHandlerService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.umeng.messge.registercallback.action" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.unregistercallback.action" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.message.handler.action" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.autoupdate.handler.action" />
+            </intent-filter>
+        </service>
+
+        <!-- V1.3.0添加的service，负责下载通知的资源 -->
+        <service android:name="com.umeng.message.UmengDownloadResourceService" />
+
+        <!-- V2.5.0添加的Service，用于本地通知 -->
+        <!-- 如果不使用本地通知，可以注释掉本地通知服务的配置 -->
+        <service
+            android:name="com.umeng.message.local.UmengLocalNotificationService"
+            android:exported="false" />
+
+        <!-- 友盟消息推送 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="55fa1578e0f55ab2fa002441" >
+        </meta-data>
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="541d2216b968008da17f30dc77300067" >
+        </meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Channel ID" >
+        </meta-data>
+
+        <!-- 环信 start -->
+        <!-- 设置环信应用的appkey -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="7565112#treatdisease" />
+        <!-- 声明sdk所需的service SDK核心功能 -->
+        <service android:name="com.easemob.chat.EMChatService" />
+
+        <!-- 开机自启动服务 -->
+        <receiver android:name="com.easemob.chat.StartServiceReceiver" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </receiver>
+
+        <!-- gcm start -->
+        <receiver
+            android:name="com.easemob.chat.EMGCMBroadcastReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.easemob.chatuidemo" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.easemob.chat.EMGCMListenerService"
+            android:exported="false" >
+        </service>
+
+        <receiver
+            android:name=".module.huanxin.receiver.GCMPushBroadCast"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.easemob.sdk.push" />
+
+                <category android:name="com.easemob.chatuidemo" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".module.huanxin.receiver.GCMPushBroadCast"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.easemob.sdk.push" />
+
+                <category android:name="com.easemob.chatuidemo" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".module.huanxin.activity.ImageGridActivity" >
+        </activity>
+        <activity android:name=".module.huanxin.activity.RecorderVideoActivity" >
+        </activity>
+        <activity android:name=".module.huanxin.activity.ShowNormalFileActivity" >
+        </activity>
+        <activity android:name=".module.huanxin.activity.ShowVideoActivity" >
+        </activity>
+        <activity android:name=".module.huanxin.activity.ShowBigImage" >
+        </activity>
+        <activity android:name=".module.huanxin.activity.ContextMenu" >
+        </activity>
+        <activity android:name=".module.huanxin.activity.AlertDialog" >
+        </activity>
+        <activity android:name=".module.huanxin.activity.ChatMainActivity" >
+        </activity>
+
+        <!-- gcm end -->
+
+
+        <!-- 环信 end -->
+        <!-- weixin pay -->
+        <!--
+        <activity
+            android:name=".weixinpay.PayActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTop" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="wx6257d1eb0c0d7756" />
+            </intent-filter>
+        </activity><<<<<<< .mine
+=======
+>>>>>>> .r762
+        -->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+
+        <receiver android:name=".weixinpay.AppRegister" >
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 环信 end -->
+        <activity
+            android:name=".module.main.registration.activity.R_Myorder_"
+            android:label="@string/title_activity_r__myorder" >
+        </activity>
+        <activity
+            android:name=".module.main.registration.activity.DoctorDetail_"
+            android:label="@string/title_activity_doctor_detail" >
+        </activity>
+        <activity
+            android:name=".module.main.rehabilitation_tutorial.activity.Play"
+            android:label="@string/title_activity_play" >
+        </activity>
+        <activity
+            android:name=".module.main.check.Check_"
+            android:label="@string/title_activity_check" >
+        </activity>
+        <activity
+            android:name=".module.main.check.MCheck_"
+            android:label="@string/title_activity_check" >
+        </activity>
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="6cd9e97b69d559a116c692c1b88606c7" />
+
+        <activity
+            android:name=".module.main.hospital_LBS.activity.gaode"
+            android:label="@string/title_activity_check" >
+        </activity>
+        
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+</manifest>

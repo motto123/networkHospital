@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    tools:context="com.huiyuan.networkhospital.module.user.HospitalsDetailsActivity" >
+
+    <RelativeLayout
+        android:id="@+id/rl_message_list"
+        android:layout_width="fill_parent"
+        android:layout_height="46dp"
+        android:background="#74bfe6" >
+
+        <ImageButton
+            android:id="@+id/imbt_message_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/ic_back22x40px" />
+
+        <TextView
+            android:id="@+id/tv_message_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/myDetail"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+       <LinearLayout
+        android:id="@+id/ll_message_list"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/rl_message_list"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/bt_message_list1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="#ededed"
+            android:drawableBottom="#74bfe6"
+            android:text="@string/bt_message_list1" >
+        </Button>
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:background="#ABABAB" />
+
+        <Button
+            android:id="@+id/bt_message_list2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="#ededed"
+            android:text="@string/bt_message_list2" >
+        </Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_message_list2"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/ll_message_list"
+        android:orientation="horizontal"
+        android:background="#ededed" >
+        <ImageView
+            android:id="@+id/img_message_list1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="#74bfe6" />
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:background="#ABABAB" />
+        <ImageView
+            android:id="@+id/img_message_list2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="#74bfe6" />
+    </LinearLayout>
+     <com.huiyuan.networkhospital.common.customview.NoScrollViewPager
+        android:id="@+id/ms_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="1dp"
+        android:layout_below="@id/ll_message_list2" 
+        />
+         
+</RelativeLayout>

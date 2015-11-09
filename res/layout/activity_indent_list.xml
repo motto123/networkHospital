@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    tools:context="com.huiyuan.networkhospital.module.user.IndentListActivity" >
+
+    <RelativeLayout
+        android:id="@+id/rlytTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="46dp"
+        android:background="#74bfe6" >
+
+        <ImageButton
+            android:id="@+id/ibtnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/ic_back22x40px" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/indent"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llytItme"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/rlytTitle"
+        android:background="@drawable/bg_white_gray_straight"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/rlytAll"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/registered04"
+                android:textColor="#ffa954"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/ivAll"
+                android:layout_width="fill_parent"
+                android:layout_height="4dp"
+                android:layout_alignParentBottom="true"
+                android:background="#ffa954"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlytNotSettled"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvNotSettled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/sport_coaching"
+                android:textColor="#3b3b3b"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/ivNotSettled"
+                android:layout_width="fill_parent"
+                android:layout_height="4dp"
+                android:layout_alignParentBottom="true"
+                android:background="#ffa954"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlytPaid"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvPaid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/title_activity_make_details"
+                android:textColor="#3b3b3b"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/ivPaid"
+                android:layout_width="fill_parent"
+                android:layout_height="4dp"
+                android:layout_alignParentBottom="true"
+                android:background="#ffa954"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.huiyuan.networkhospital.common.customview.NoScrollViewPager
+        android:id="@+id/flytIndent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/llytItme" />
+
+</RelativeLayout>

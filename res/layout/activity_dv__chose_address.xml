@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    tools:context="com.huiyuan.networkhospital.module.main.doctor_visit.activity.Dv_ChosePeopleDetailesActivity" >
+
+    <RelativeLayout
+        android:id="@+id/rl_chose_address"
+        android:layout_width="fill_parent"
+        android:layout_height="46dp"
+        android:background="#74BFE6" >
+
+        <TextView
+            android:id="@+id/tv_chose_address_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/title_activity_dv__chose_address"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/imbt_chose_address_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/ic_back22x40px" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bt_chose_address_deta_sum"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="38dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/bg_blue_circle"
+        android:gravity="center"
+        android:text="@string/bt_chose_address"
+        android:textColor="#ffffff" />
+
+     <com.huiyuan.networkhospital.common.widget.XListView
+        android:id="@+id/list_chose_address_detailes"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/bt_chose_address_deta_sum"
+        android:layout_below="@id/rl_chose_address"
+        android:background="#f7f7f7"
+        android:divider="#f7f7f7"
+        android:dividerHeight="10dp"
+        android:footerDividersEnabled="false"
+        android:listSelector="@android:color/transparent" 
+        />
+
+</RelativeLayout>

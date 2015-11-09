@@ -1,0 +1,260 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.huiyuan.networkhospital.module.main.rehabilitation_tutorial.activity.PlayerActivity" >
+
+    <RelativeLayout
+        android:id="@+id/rlytRehabilitationTutorialTitle"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="#74bfe6" >
+
+        <ImageButton
+            android:id="@+id/ibtnPlayerTitleBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/ic_back22x40px" />
+
+        <TextView
+            android:id="@+id/tvPlayerTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/rehabilitationTutorial"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/sclvPlayerContext"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rlytRehabilitationTutorialTitle"
+        android:layout_centerHorizontal="true"
+        android:scrollbars="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rlytPlayerContext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/tvPlayerContextTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/rehabilitationTutorialTitle"
+                android:textColor="#3b3b3b"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvPlayerContextTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvPlayerContextTitle"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/time"
+                android:textColor="#7d7d7d"
+                android:textSize="10sp" />
+            <!--
+            <RelativeLayout
+                android:id="@+id/rl_vvPlayerContextVideo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tvPlayerContextTime" >
+
+                <com.huiyuan.networkhospital.module.main.rehabilitation_tutorial.activity.MyVideoView  
+                    android:id="@+id/vvPlayerContextVideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="10dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llytPlayerContextVideoDown"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/rl_vvPlayerContextVideo"
+                android:background="#3a3d40"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:id="@+id/rlytSupport"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingLeft="17dp" >
+
+                    <ImageView
+                        android:id="@+id/ivPlayerContextVideoDownSupportLine"
+                        android:layout_width="1dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="#ffffff" />
+
+                    <ImageButton
+                        android:id="@+id/ibtnPlayerContextVideoDownSupport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:src="@drawable/ic_up" />
+
+                    <TextView
+                        android:id="@+id/tvPlayerContextVideoDownSupportTimes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="2dp"
+                        android:layout_toLeftOf="@+id/ivPlayerContextVideoDownSupportLine"
+                        android:text="@string/times"
+                        android:textColor="#ffffff"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlytShare"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/rlytSupport"
+                    android:layout_weight="1"
+                    android:paddingLeft="17dp" >
+
+                    <ImageView
+                        android:id="@+id/ivPlayerContextVideoDownShareLine"
+                        android:layout_width="1dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="#ffffff" />
+
+                    <ImageButton
+                        android:id="@+id/ibtnPlayerContextVideoDownShare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/ivPlayerContextVideoDownShareLine"
+                        android:layout_marginRight="14dp"
+                        android:layout_toLeftOf="@+id/ivPlayerContextVideoDownShareLine"
+                        android:background="@null"
+                        android:src="@drawable/ic_share" />
+
+                    <TextView
+                        android:id="@+id/tvPlayerContextVideoDownShareText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/share"
+                        android:textColor="#ffffff"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlytCollection"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/rlytShare"
+                    android:layout_weight="1"
+                    android:paddingLeft="17dp" >
+
+                    <TextView
+                        android:id="@+id/tvCollection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/collection"
+                        android:textColor="#ffffff"
+                        android:textSize="18sp" />
+
+                    <ImageButton
+                        android:id="@+id/ibtnCollection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="14dp"
+                        android:background="@null"
+                        android:src="@drawable/ic_collect" />
+                </RelativeLayout>
+            </LinearLayout>
+            -->
+
+            <ImageView
+                android:id="@+id/imgb_PlayerContextVideoDown"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_below="@id/tvPlayerContextTime"
+                android:src="@drawable/ic_paly" />
+
+            <WebView
+                android:id="@+id/web_PlayerContextVideoDown"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tvPlayerContextTime"
+                android:src="@drawable/ic_paly"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/rlytSupport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvPlayerContextIntroduceText"
+                android:layout_alignRight="@+id/tvPlayerContextIntroduceTitle"
+                android:layout_below="@+id/imgb_PlayerContextVideoDown"
+                android:background="@drawable/bg_blue_circle_shallow" >
+
+                <TextView
+                    android:id="@+id/tvPlayerContextVideoDownSupportTimes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="(2)"
+                    android:layout_marginRight="2dp"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
+
+                <ImageButton
+                    android:id="@+id/ibtnPlayerContextVideoDownSupport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="2dp"
+                    android:background="@null"
+                    android:src="@drawable/ic_up" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvPlayerContextIntroduceTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tvPlayerContextIntroduceText"
+                android:layout_below="@+id/rlytSupport"
+                android:text="@string/videoIntroduce"
+                android:textColor="#3b3b3b"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvPlayerContextIntroduceText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvPlayerContextIntroduceTitle"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="10dp"
+                android:lineSpacingExtra="5dp"
+                android:text="@string/tvTutorialTextContents"
+                android:textColor="#3b3b3b"
+                android:textSize="11sp" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

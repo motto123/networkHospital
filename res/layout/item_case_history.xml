@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/bg_white_gray_straight"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/img_case_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="13dp"
+        android:src="@drawable/ic_diagnostic_records_03" />
+
+    <TextView
+        android:id="@+id/tv_case_history_class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/img_case_history"
+        android:textSize="16sp"
+        android:layout_marginLeft="10dp"
+        android:text="@string/tv_case_history_class" />
+
+    <TextView
+        android:id="@+id/tv_case_history_doc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_below="@id/tv_case_history_class"
+        android:layout_toRightOf="@id/img_case_history"
+        android:layout_marginLeft="10dp"
+        android:text="@string/tv_case_history_doc"
+        android:paddingBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tv_case_history_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="43dp"
+        android:text="@string/tv_case_history_time"
+        android:textColor="#919191"
+        android:textSize="10sp"/>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:src="@drawable/ic_right_arrow22px40px"/>
+        
+        
+</RelativeLayout>

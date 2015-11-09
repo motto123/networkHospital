@@ -1,0 +1,125 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.huiyuan.networkhospital.module.main.rehabilitation_tutorial.activity.ImageTextTutorialActivity" >
+
+    <RelativeLayout
+        android:id="@+id/rlytImageTextTutorialTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="46dp"
+        android:background="#74bfe6" >
+
+        <ImageButton
+            android:id="@+id/ibtnImageTextTutorialTitleBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/ic_back22x40px" />
+
+        <TextView
+            android:id="@+id/tvImageTextTutorialTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/rehabilitationTutorial"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/sclvImageTextTutorialContext"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/rlytImageTextTutorialTitle"
+        android:layout_centerHorizontal="true"
+        android:scrollbars="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rlytImageTextTutorialContext"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tvImageTextTutorialContextTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="@string/imageTextTitle"
+                android:textColor="#3b3b3b"
+                android:textSize="18sp" />
+
+          
+            <ImageView
+                android:id="@+id/ivImageTextTutorialContextVideo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_below="@id/tvImageTextTutorialContextTitle"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/test_ic_course_img" />
+
+            <RelativeLayout
+                android:id="@+id/rlytImageTextTutorialContextImageDown"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_below="@id/ivImageTextTutorialContextVideo"
+                android:layout_marginTop="0.5dp"
+                android:background="@drawable/test_ic_course_down" >
+
+                <TextView
+                    android:id="@+id/tvImageTextTutorialContextImageDownTimes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="7dp"
+                    android:text="@string/times"
+                    android:textColor="#ffffff"
+                    android:textSize="10sp" />
+
+                <ImageButton
+                    android:id="@+id/ibtnImageTextTutorialContextImageDownSupport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/tvImageTextTutorialContextImageDownTimes"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="2dp"
+                    android:layout_toLeftOf="@+id/tvImageTextTutorialContextImageDownTimes"
+                    android:background="@null"
+                    android:src="@drawable/ic_support" />
+
+                <ImageButton
+                    android:id="@+id/ibtnImageTextTutorialContextImageDownShare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/ibtnImageTextTutorialContextImageDownSupport"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="25dp"
+                    android:layout_toLeftOf="@+id/ibtnImageTextTutorialContextImageDownSupport"
+                    android:background="@null"
+                    android:src="@drawable/ic_share" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tvImageTextTutorialContextIntroduceText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rlytImageTextTutorialContextImageDown"
+                android:layout_marginTop="18dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:lineSpacingExtra="5dp"
+                android:text="@string/tvTutorialTextContents"
+                android:textColor="#3b3b3b"
+                android:textSize="11sp" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

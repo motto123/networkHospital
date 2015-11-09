@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rl_gm_end_item"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_gray_gray_straight_thin" >
+
+        <TextView
+            android:id="@+id/tv_gm_end_item_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:layout_alignParentTop="true"
+            android:text="@string/tv_gm_end_item"
+            android:textColor="#ffa954"
+            android:textSize="11sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_gm_end_item2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/rl_gm_end_item"
+        android:background="#ffffff" >
+
+        <ImageView
+            android:id="@+id/img_gm_end_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="3dp"
+            android:src="@drawable/test_ic_medicine_img" />
+
+        <TextView
+            android:id="@+id/tv_gm_end_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/img_gm_end_item"
+            android:layout_marginLeft="17dp"
+            android:layout_toRightOf="@id/img_gm_end_item"
+            android:text="@string/medicine"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/tv_gm_end_item_course"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_gm_end_item_name"
+            android:layout_below="@id/tv_gm_end_item_name"
+            android:layout_marginTop="3dp"
+            android:text="@string/medicine_introduced"
+            android:textColor="#5e5e5e"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/tv_gm_end_ite_moeny"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_gm_end_item_name"
+            android:layout_below="@id/tv_gm_end_item_course"
+            android:text="@string/price_count"
+            android:textColor="#5e5e5e"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/tv__gm_end_item_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="5dp"
+            android:text="@string/subtotal"
+            android:textColor="#FF0000"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

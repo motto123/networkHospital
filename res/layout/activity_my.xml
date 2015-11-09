@@ -1,0 +1,305 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.huiyuan.networkhospital.module.user.MyActivity" >
+
+    <RelativeLayout
+        android:id="@+id/rlytTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="46dp"
+        android:background="#74bfe6" >
+
+        <ImageButton
+            android:id="@+id/ibtnMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:background="@null"
+            android:src="@drawable/ic_main_more" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/my"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlytHead"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlytTitle"
+        android:background="@drawable/test_ic_information" >
+
+        <ImageView
+            android:id="@+id/ivHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/test_ic_my_portrait" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llytInfo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlytHead"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rlytMyInfo"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_white_straight" >
+
+            <ImageView
+                android:id="@+id/ivMyInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/ic_my_information" />
+
+            <TextView
+                android:id="@+id/tvMyInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/ivMyInfo"
+                android:text="@string/userInfo"
+                android:textColor="#3b3b3b"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/ivMyinfoGo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/ic_right_arrow22px40px" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlytChangepassword"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_white_straight" >
+
+            <ImageView
+                android:id="@+id/ivChangePassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/ic_my_change_pwd" />
+
+            <TextView
+                android:id="@+id/tvChangePassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/ivChangePassword"
+                android:text="@string/changePassword"
+                android:textColor="#3b3b3b"
+                android:textSize="13sp" />
+            <ImageView
+                android:id="@+id/ivChangePasswordGo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/ic_right_arrow22px40px" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlytMyNews"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_white_straight" >
+
+            <ImageView
+                android:id="@+id/ivMyNews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/ic_my_message" />
+
+            <TextView
+                android:id="@+id/tvMyNews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/ivMyNews"
+                android:text="@string/myDetail"
+                android:textColor="#3b3b3b"
+                android:textSize="13sp" />
+            <ImageView
+                android:id="@+id/ivMyNewsGo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/ic_right_arrow22px40px" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rlytOrderDetails"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_white_straight" >
+
+            <ImageView
+                android:id="@+id/ivOrderDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/ic_my_order" />
+
+            <TextView
+                android:id="@+id/tvOrderDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/ivOrderDetails"
+                android:text="@string/orderDetails"
+                android:textColor="#3b3b3b"
+                android:textSize="13sp" />
+            <ImageView
+                android:id="@+id/ivOrderDetailsGo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/ic_right_arrow22px40px" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/rlytMyCase"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_white_straight" >
+
+            <ImageView
+                android:id="@+id/ivMyCase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/ic_my_record" />
+
+            <TextView
+                android:id="@+id/tvMyCase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/ivMyCase"
+                android:text="@string/my_record09"
+                android:textColor="#3b3b3b"
+                android:textSize="13sp" />
+            <ImageView
+                android:id="@+id/ivMyCaseGo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/ic_right_arrow22px40px" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/rlytMyCollect"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_white_straight" >
+
+            <ImageView
+                android:id="@+id/ivMyCollect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/ic_my_collect" />
+
+            <TextView
+                android:id="@+id/tvMyCollect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/ivMyCollect"
+                android:text="@string/myCollect"
+                android:textColor="#3b3b3b"
+                android:textSize="13sp" />
+            <ImageView
+                android:id="@+id/ivMyCollectGo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/ic_right_arrow22px40px" />
+        </RelativeLayout>
+        
+        
+        
+        <RelativeLayout
+            android:id="@+id/rlytMyAddress"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_white_straight" >
+
+            <ImageView
+                android:id="@+id/ivMyAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/ic_my_address" />
+
+            <TextView
+                android:id="@+id/tvMyAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/ivMyAddress"
+                android:text="@string/myAddress"
+                android:textColor="#3b3b3b"
+                android:textSize="13sp" />
+            <ImageView
+                android:id="@+id/ivMyAddressGo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/ic_right_arrow22px40px" />
+            <ImageView 
+                android:id="@+id/ivLine"
+                android:layout_width="fill_parent"
+                android:layout_height="2px"
+                android:layout_alignParentBottom="true"
+                android:background="#d4d4d4"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

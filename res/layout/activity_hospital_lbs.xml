@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.huiyuan.networkhospital.module.main.hospital_LBS.activity.HospitalLBSActivity" >
+
+    <RelativeLayout
+        android:id="@+id/rl_evaluate"
+        android:layout_width="fill_parent"
+        android:layout_height="46dp"
+        android:background="#74BFE6" >
+
+        <TextView
+            android:id="@+id/tv_evaluate_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/map"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/imbt_evaluate_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dp"
+            android:background="@null"
+            android:src="@drawable/ic_back22x40px" />
+    </RelativeLayout>
+
+   <LinearLayout
+       android:id="@+id/ll1"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentLeft="true"
+       android:background="#f7f7f7"
+       android:layout_below="@+id/rl_evaluate" >
+
+       <Button
+           android:id="@+id/button1"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:onClick="SearchButtonProcess"
+           android:background="#FFFFFF"
+           android:text="自驾" />
+
+       <Button
+           android:id="@+id/button2"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:onClick="SearchButtonProcess"
+           android:background="#FFFFFF"
+           android:text="公交" />
+
+       <Button
+           android:id="@+id/button3"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:onClick="SearchButtonProcess"
+           android:background="#FFFFFF"
+           android:text="步行" />
+   </LinearLayout>
+
+   <com.baidu.mapapi.map.MapView
+       android:id="@+id/mapView"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_alignParentLeft="true"
+       android:layout_below="@+id/ll1"
+       android:clickable="true" >
+   </com.baidu.mapapi.map.MapView>
+
+</RelativeLayout>

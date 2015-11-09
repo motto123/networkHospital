@@ -1,0 +1,156 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.huiyuan.networkhospital.module.user.AlterSucceedActivity" >
+
+    <RelativeLayout
+        android:id="@+id/rlytTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="46dp"
+        android:background="#74bfe6" >
+
+        <ImageButton
+            android:id="@+id/ibtnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/ic_back22x40px" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/changePassword"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlytOldPassword"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/rlytTitle"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="112dp"
+        android:background="@drawable/bg_white_gray_circle" >
+
+        <TextView
+            android:id="@+id/tvOldPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="9dp"
+            android:text="@string/oldPassword"
+            android:textColor="#3b3b3b"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/etOldPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/tvOldPassword"
+            android:background="@null"
+            android:password="true"
+            android:text="safsdfgs"
+            android:textColor="#3b3b3b"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlytNewPassword"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/rlytOldPassword"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_white_gray_circle" >
+
+        <TextView
+            android:id="@+id/tvNewPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="9dp"
+            android:text="@string/newPassword"
+            android:textColor="#3b3b3b"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/etNewPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/tvNewPassword"
+            android:background="@null"
+            android:password="true"
+            android:text="safsdfgs"
+            android:textColor="#3b3b3b"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlytConfirmPassword"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/rlytNewPassword"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_white_gray_circle" >
+
+        <TextView
+            android:id="@+id/tvConfirmPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="9dp"
+            android:text="@string/confirmPword"
+            android:textColor="#3b3b3b"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/etConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/tvConfirmPassword"
+            android:background="@null"
+            android:password="true"
+            android:text="safsdfgs"
+            android:textColor="#3b3b3b"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/ibtnBackLogin"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/rlytConfirmPassword"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="41dp"
+        android:background="@drawable/bg_blue_circle"
+        android:text="@string/backLg"
+        android:textColor="#ffffff"
+        android:textSize="19sp" />
+
+    <TextView
+        android:id="@+id/tvHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ibtnBackLogin"
+        android:layout_below="@+id/ibtnBackLogin"
+        android:layout_marginTop="30dp"
+        android:text="@string/changeSuccess"
+        android:textColor="#3b3b3b"
+        android:textSize="20sp" />
+
+</RelativeLayout>

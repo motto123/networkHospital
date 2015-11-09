@@ -1,0 +1,410 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    tools:context="com.huiyuan.networkhospital.module.main.registration.activity.R_PaymentActivity" >
+
+    <RelativeLayout
+        android:id="@+id/rlytTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="46dp"
+        android:background="#74bfe6" >
+
+        <ImageButton
+            android:id="@+id/ibtnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/ic_back22x40px" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/registrationDetail"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llytRPaymentInformation"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlytTitle"
+        android:layout_marginTop="13dp"
+        android:orientation="vertical" >
+        
+        <RelativeLayout
+            android:id="@+id/rlytCreateTime"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_white_straight" >
+
+            <TextView
+                android:id="@+id/tvCreateTimeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:text="创建时间:"
+                android:textColor="#3b3b3b"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvCreateTime"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/tvCreateTimeTitle"
+                android:background="@null"
+                android:editable="false"
+                android:singleLine="true"
+                android:textColor="#3b3b3b"
+                android:textSize="16sp" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/rlytIndentNum"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_white_straight" >
+
+            <TextView
+                android:id="@+id/tvIndentTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:text="订单号:"
+                android:textColor="#3b3b3b"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvIndent"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/tvIndentTitle"
+                android:background="@null"
+                android:editable="false"
+                android:singleLine="true"
+                android:textColor="#3b3b3b"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlytName"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_white_straight" >
+
+            <TextView
+                android:id="@+id/tvNameTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:text="@string/rPaymentMyInformationNameTitle"
+                android:textColor="#3b3b3b"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/tvNameTitle"
+                android:background="@null"
+                android:editable="false"
+                android:singleLine="true"
+                android:textColor="#3b3b3b"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlytSex"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_white_straight" >
+
+            <TextView
+                android:id="@+id/tvSexTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:text="@string/rPaymentMyInformationSexTitle"
+                android:textColor="#3b3b3b"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/Sex123"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/tvSexTitle"
+                android:background="@null"
+                android:editable="false"
+                android:maxLength="6"
+                android:singleLine="true"
+                android:textColor="#3b3b3b"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlytTel"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_white_straight" >
+
+            <TextView
+                android:id="@+id/tvTelTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:text="@string/rPaymentMyInformationTelTitle"
+                android:textColor="#3b3b3b"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvTel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/tvTelTitle"
+                android:background="@null"
+                android:digits="“0123456789”"
+                android:editable="false"
+                android:maxLength="11"
+                android:singleLine="true"
+                android:textColor="#3b3b3b"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlytId"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_white_straight" >
+
+            <TextView
+                android:id="@+id/tvIdTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:text="@string/titleId"
+                android:textColor="#3b3b3b"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvId"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/tvIdTitle"
+                android:background="@null"
+                android:digits="“0123456789Xx”"
+                android:editable="false"
+                android:maxLength="18"
+                android:singleLine="true"
+                android:textColor="#3b3b3b"
+                android:textSize="16sp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rlytMyLine"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_gray_line_straight" >
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rlytDName"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_white_straight"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tvDNameTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:text="@string/doctorNameTitle"
+                android:textColor="#3b3b3b"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvDName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/tvDNameTitle"
+                android:text="@string/doctorNameContext"
+                android:textColor="#3b3b3b"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvNameAppellation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tvDName"
+                android:text="@string/doctorNameAppellation"
+                android:textColor="#7d7d7d"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlytDepartment"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_white_straight" >
+
+            <TextView
+                android:id="@+id/tvDepartmentTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:text="@string/rPaymentDoctorInformationDepartmentTitle"
+                android:textColor="#3b3b3b"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvDepartment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/tvDepartmentTitle"
+                android:text="医生姓名"
+                android:textColor="#3b3b3b"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlytTime"
+            android:layout_width="fill_parent"
+             android:layout_height="30dp"
+            android:background="@drawable/bg_white_straight" >
+
+            <TextView
+                android:id="@+id/tvTimeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:text="@string/doctorTimeTitle"
+                android:textColor="#3b3b3b"
+                android:textSize="13sp" />
+            
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/tvTimeTitle"
+                android:background="@null"
+                android:editable="false"
+                android:singleLine="true"
+                android:textColor="#3b3b3b"
+                android:textSize="16sp" />
+            
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlytCost"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_white_straight" >
+
+            <TextView
+                android:id="@+id/tvCostTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:text="@string/costTitle"
+                android:textColor="#3b3b3b"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/tvCostTitle"
+                android:textColor="#ff0000"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_white_straight" >
+
+            <TextView
+                android:id="@+id/tvcosttitletv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:text="@string/tvcosttitletv"
+                android:textColor="#3b3b3b"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvcosttv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/tvcosttitletv"
+                android:text="@string/tvcosttv"
+                android:textColor="#ff0000"
+                android:textSize="13sp" />
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_straight"
+            >
+    <TextView
+        android:id="@+id/tvReason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:textColor="#FF0000"
+        android:layout_margin="5dp"
+        android:visibility="gone"
+        android:text="@string/reason" />
+        <TextView 
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contact_us"
+        android:layout_marginTop="2dp"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+        android:layout_below="@+id/tvReason"
+        />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

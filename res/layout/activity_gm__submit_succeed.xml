@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    tools:context="com.huiyuan.networkhospital.module.main.sport_coaching.activity.Sc_PaySucceedActivity" >
+
+    <RelativeLayout
+        android:id="@+id/rl_gm_submit_succeed"
+        android:layout_width="fill_parent"
+        android:layout_height="46dp"
+        android:background="#74BFE6" >
+
+        <TextView
+            android:id="@+id/tv_gm_submit_succeed_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/title_activity_gm__submit_succeed"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/imbt_gm_submit_succeed_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/ic_back22x40px" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_gm_submit_succeed"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/rl_gm_submit_succeed"
+        android:background="@drawable/bg_white_straight"
+        android:paddingLeft="10dp"
+        android:paddingTop="17dp"
+        android:text=""
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/bt_gm_submit_submit"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/tv_gm_submit_succeed"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/bg_blue_circle"
+        android:text="确定"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>

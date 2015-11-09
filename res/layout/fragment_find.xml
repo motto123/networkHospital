@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_find"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    tools:context="com.huiyuan.networkhospital.module.main.fragment.FindFragment" >
+
+    <ImageView
+        android:id="@+id/img_find"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/test_ic_find_banner"
+        android:background="#f7f7f7"
+         />
+
+<RelativeLayout
+    android:id="@+id/rl_find_test"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:layout_below="@id/img_find"
+    android:layout_marginTop="20dp"
+    android:background="@drawable/bg_white_straight" >
+
+    <ImageView
+        android:id="@+id/img_find_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="7dp"
+        android:src="@drawable/ic_test" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/img_find_test"
+        android:text="@string/find_test"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="11dp"
+        android:textSize="16sp" />
+    <ImageView
+        android:id="@+id/img_find_test2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_right_arrow22px40px"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"
+        />
+</RelativeLayout>
+<RelativeLayout
+    android:id="@+id/rl_find_game"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:layout_below="@id/rl_find_test"
+    android:layout_marginTop="20dp"
+    android:background="@drawable/bg_white_straight" >
+
+    <ImageView
+        android:id="@+id/img_game_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="7dp"
+        android:src="@drawable/ic_game" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/img_game_test"
+        android:text="@string/find_game"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="11dp"
+        android:textSize="16sp" />
+    <ImageView
+        android:id="@+id/img_game_test2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_right_arrow22px40px"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"
+        />
+</RelativeLayout>
+
+<LinearLayout
+    android:id="@+id/linearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:orientation="vertical" >
+</LinearLayout>
+
+</RelativeLayout>

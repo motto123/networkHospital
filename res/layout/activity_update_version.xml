@@ -1,0 +1,152 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    tools:context="com.huiyuan.networkhospital.module.more.UpdateVersionActivity" >
+
+    <RelativeLayout
+        android:id="@+id/rlytTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="46dp"
+        android:background="#74bfe6" >
+
+        <ImageButton
+            android:id="@+id/ibtnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/ic_back22x40px" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/updateVersion"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlytUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_below="@+id/rlytTitle"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/bg_white_gray_straight" >
+
+        <RelativeLayout
+            android:id="@+id/newVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp" >
+
+            <TextView
+                android:id="@+id/tvVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/newVersion"
+                android:textColor="#3b3b3b"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvVersionCentext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tvVersion"
+                android:text="@string/newVersionContext"
+                android:textColor="#3b3b3b"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btNow"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@+id/newVersion"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_update"
+            android:text="@string/nowUpdate"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvMainCentext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlytUpdate"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/mainContext"
+        android:textColor="#3b3b3b"
+        android:textSize="17sp" />
+
+    <ScrollView
+        android:id="@+id/sclvCentent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/tvMainCentext" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <RelativeLayout
+                android:id="@+id/rlytUpdateCentext1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp" >
+
+                <TextView
+                    android:id="@+id/tvUpdateCentext1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/UpdateContext1"
+                    android:textColor="#3b3b3b"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/ivUpdateCentext1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvUpdateCentext1"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_update01" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlytUpdateCentext2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlytUpdateCentext1"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp" >
+
+                <TextView
+                    android:id="@+id/tvUpdateCentext2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/UpdateContext2"
+                    android:textColor="#3b3b3b"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/ivUpdateCentext2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvUpdateCentext2"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_update02" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

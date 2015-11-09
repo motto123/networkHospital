@@ -1,0 +1,18 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.huiyuan.networkhospital.module.main.message.fragment.MsHospital" >
+
+     <com.huiyuan.networkhospital.common.widget.XListView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/rl_message_list"
+        android:background="#f7f7f7"
+        android:divider="#f7f7f7"
+        android:dividerHeight="10dp"
+        android:footerDividersEnabled="false"
+        android:listSelector="@android:color/transparent" 
+        />
+</RelativeLayout>

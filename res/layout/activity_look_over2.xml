@@ -1,0 +1,145 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    tools:context="com.huiyuan.networkhospital.module.main.doctor_visit.activity.LookOverActivity" >
+
+    <RelativeLayout
+        android:id="@+id/rl_look_over_top"
+        android:layout_width="fill_parent"
+        android:layout_height="46dp"
+        android:background="#74BFE6" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/title_activity_look_over"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/imbt_look_over_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/ic_back22x40px" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_look_over_top"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_below="@+id/rl_look_over_top"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_white_gray_straight"
+        android:gravity="center"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="@string/tv_look_over_top"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/bt_particpation_disjoin"
+        android:layout_width="150dp"
+        android:layout_height="41dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="35dp"
+        android:background="@drawable/bg_blue_circle"
+        android:gravity="center"
+        android:text="@string/bt_particpation_disjoin"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/lll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/listView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/listView"
+        android:layout_marginBottom="90dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/llAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_gray_straight" >
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="预约地址：" />
+
+            <TextView
+                android:id="@+id/tv_look_over_address"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="9dp"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignLeft="@+id/llAddress"
+            android:layout_alignRight="@+id/llAddress"
+            android:layout_below="@+id/llAddress"
+            android:background="@drawable/bg_white_gray_straight"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="9dp"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/TextView02"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignLeft="@+id/TextView01"
+            android:layout_alignRight="@+id/TextView01"
+            android:layout_below="@+id/TextView01"
+            android:background="@drawable/bg_white_gray_straight"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="9dp"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/TextView03"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignLeft="@+id/TextView02"
+            android:layout_alignRight="@+id/TextView02"
+            android:layout_below="@+id/TextView02"
+            android:background="@drawable/bg_white_gray_straight"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="9dp"
+            android:textSize="12sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lll"
+        android:layout_alignLeft="@+id/tv_look_over_top"
+        android:layout_alignRight="@+id/tv_look_over_top"
+        android:layout_below="@+id/tv_look_over_top"
+        android:divider="#f7f7f7"
+        android:dividerHeight="5dp" >
+    </ListView>
+
+</RelativeLayout>

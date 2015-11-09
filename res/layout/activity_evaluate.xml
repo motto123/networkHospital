@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    tools:context="com.huiyuan.networkhospital.module.main.get_medicine.activity.EvaluateActivity" >
+
+    <RelativeLayout
+        android:id="@+id/rl_evaluate"
+        android:layout_width="fill_parent"
+        android:layout_height="46dp"
+        android:background="#74BFE6" >
+
+        <TextView
+            android:id="@+id/tv_evaluate_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/title_activity_evaluate"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/imbt_evaluate_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/ic_back22x40px" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_evaluate_name"
+        android:layout_width="fill_parent"
+        android:layout_height="46dp"
+        android:layout_below="@id/rl_evaluate"
+        android:background="@drawable/bg_white_gray_straight"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="8dp"
+        android:text="@string/tv_evaluate_name" />
+
+    <RelativeLayout
+        android:id="@+id/rl_evaluate_conment"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_evaluate_name"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_white_gray_straight" >
+
+        <TextView
+            android:id="@+id/tv_evaluate_conment"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="7dp"
+            android:text="@string/tv_evaluate_conment"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/et_evaluate_conment"
+            android:layout_width="344dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/tv_evaluate_conment"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:background="@drawable/bg_gray_gray_straight"
+            android:gravity="top"
+            android:hint="@string/et_evaluate_conment"
+            android:padding="7dp"
+            android:textSize="11sp" />
+
+        <RatingBar
+            android:id="@+id/ratingBar1"
+            style="@style/foodRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_evaluate_conment"
+            android:layout_marginTop="8dp"
+            android:numStars="5"
+            android:rating="5"
+            android:stepSize="1" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bt_evaluate_submit"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/rl_evaluate_conment"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/bg_blue_circle"
+        android:text="@string/bt_submit"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>

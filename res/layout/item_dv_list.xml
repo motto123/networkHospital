@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@drawable/bg_white_gray_straight"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/Platform_View_item_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="9dp"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/Platform_View_item_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/Platform_View_item_tv1"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="1dp"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/Platform_View_item_tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/Platform_View_item_tv2"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="3dp"
+        android:textSize="10sp"
+        android:textColor="#7d7d7d"/>
+
+    <Button
+        android:id="@+id/Platform_View_item_bt"
+        android:layout_width="60dp"
+        android:layout_height="27dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="31dp"
+        android:background="@drawable/bg_orange_circle"
+        android:gravity="center"
+        android:text="参与"
+        android:textColor="#ffffff"
+        android:textSize="14sp" />
+
+</RelativeLayout>

@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    tools:context="com.huiyuan.networkhospital.module.main.get_medicine.activity.SelectDoctorActivity" >
+
+    <RelativeLayout
+        android:id="@+id/rl_sport_person"
+        android:layout_width="fill_parent"
+        android:layout_height="46dp"
+        android:background="#74BFE6" >
+
+        <TextView
+            android:id="@+id/tv_sport_person_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/title_activity_sport_person"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/imbt_sport_person_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/ic_back22x40px" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_sport_chose"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/rl_sport_person"
+        android:background="#d4d4d4"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/ll_sport_chose1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_white_gray_straight"
+            android:text="@string/ll_sport_chose1" />
+
+        <Button
+            android:id="@+id/ll_sport_chose2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_white_gray_straight"
+            android:text="@string/ll_sport_chose2" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_sport_bg"
+        android:layout_below="@id/ll_sport_chose"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d7d7d7" />
+    <LinearLayout
+        android:id="@+id/ll_sport_person"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/img_sport_bg"
+        android:background="#d4d4d4"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <Spinner
+            android:id="@+id/sp_sport_person1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_sp1"
+            android:dropDownWidth="800dp" />
+
+        <Spinner
+            android:id="@+id/sp_sport_person2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_sp1"
+            android:dropDownWidth="800dp" />
+
+        <Spinner
+            android:id="@+id/sp_sport_person3"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_sp1"
+            android:dropDownWidth="800dp" />
+    </LinearLayout>
+
+    <com.huiyuan.networkhospital.common.widget.XListView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/ll_sport_person"
+        android:layout_marginTop="10dp"
+        android:background="#f7f7f7"
+        android:divider="#f7f7f7"
+        android:dividerHeight="10dp"
+        android:footerDividersEnabled="false"
+        android:listSelector="@android:color/transparent" />
+
+</RelativeLayout>

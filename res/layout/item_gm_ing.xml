@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:background="@drawable/bg_white_gray_straight"
+    android:descendantFocusability="blocksDescendants" >
+<!-- com.huiyuan.networkhospital.common.roundhead.CircularImage -->
+    <LinearLayout 
+        android:id="@+id/ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+    <com.huiyuan.networkhospital.common.roundhead.CircularImage
+        android:id="@+id/img_gm_ing_item"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/ic_head_base" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_gm_ing_item3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/ll"
+        android:text="@string/rPaymentMyInformationNameTitle"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_gm_ing_item1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/tv_gm_ing_item3"
+        android:text=""
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_gm_ing_item2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_gm_ing_item3"
+        android:layout_below="@id/tv_gm_ing_item1"
+        android:layout_marginTop="2dp"
+        android:text="@string/tv_dv_subsucceed_address"
+        android:textColor="#ff0000"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/bt_gm_chat"
+        android:layout_width="55dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="#FF0000"
+        android:text="聊天"
+        android:textColor="#ffffff"
+        android:textSize="16sp" 
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/bt_gm_prescription"
+        android:layout_width="55dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/bt_gm_chat"
+        android:background="#ffa042"
+        android:text="药方"
+        android:textColor="#ffffff"
+        android:textSize="16sp" 
+        android:visibility="gone"/>
+</RelativeLayout>
