@@ -99,7 +99,7 @@ public class R_PAdapter extends BaseAdapter {
 			break;
 		}
 		try {
-			switch (d.getRTime().substring(11, 13)) {
+			/*switch (d.getRTime().substring(11, 13)) {
 			case "09":
 
 				holder.time.setText(context.getString(R.string.tv_item_r_myorder2)
@@ -115,7 +115,9 @@ public class R_PAdapter extends BaseAdapter {
 
 			default:
 				break;
-			}
+			}*/
+			holder.time.setText(context.getString(R.string.tv_item_r_myorder2)
+					+ d.getRTime());
 		} catch (Exception e) {
 			Tools.LogE("服务器返回的时间不符合时间格式！");
 			e.printStackTrace();

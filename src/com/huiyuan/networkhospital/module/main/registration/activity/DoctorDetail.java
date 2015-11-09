@@ -1,7 +1,5 @@
 package com.huiyuan.networkhospital.module.main.registration.activity;
 
-import java.util.ArrayList;
-
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
@@ -10,7 +8,6 @@ import org.androidannotations.annotations.ViewById;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,7 +16,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.huiyuan.networkhospital.R;
-import com.huiyuan.networkhospital.entity.dengzhaojun.Dv_people;
 import com.huiyuan.networkhospital.entity.dengzhaojun.OrderDoctor;
 /**
  * 

@@ -21,9 +21,7 @@ import android.os.Bundle;
 import android.text.format.Time;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -37,7 +35,6 @@ import com.huiyuan.networkhospital.constant.Constant;
 import com.huiyuan.networkhospital.entity.dengzhaojun.OrderDoctor;
 import com.huiyuan.networkhospital.entity.hepeng.R_pay;
 import com.huiyuan.networkhospital.module.BaseActivity;
-import com.huiyuan.networkhospital.module.main.get_medicine.activity.Gm_PaymentActivity;
 import com.huiyuan.networkhospital.weixinpay.PayActivity;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 /**
@@ -62,12 +59,15 @@ public class R_PaymentActivity extends BaseActivity {
 	TextView tvCost;
 	@ViewById
 	TextView Sex123;
-	private AsyncHttpResponseHandler R_PHandler;
+	@ViewById
+	Button btPay;
 	OrderDoctor order = new OrderDoctor();
 	String time = "";
 	ArrayAdapter<String> person1Adapter = null; // 适配器
 	@ViewById
 	Spinner person1;
+	@ViewById
+	Spinner spHour;
 	String sex = "0";
 	static Context context;
 	int Position = 0;
@@ -77,6 +77,15 @@ public class R_PaymentActivity extends BaseActivity {
 	String Age = "";
 	String name = "挂号费";
 	String total = "1";
+
+	String[] am = new String[]{"9:00","10:00","11:00"};
+
+	String[] pm = new String[]{"14:00","15:00","16:00"};
+	private ArrayAdapter<String> ampmAdapter;
+	/**
+	 * 小时spinner被点击的位置
+	 */
+	private int position1;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -172,15 +181,47 @@ public class R_PaymentActivity extends BaseActivity {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
+		int j =0;
+		//获取数组长度
+		for(int i = 0;i<times.length;i++){
+			if(filterTime(times[i].substring(3, 5))){
+				j++;
+			}
+		}
+		String[] timeCopy = new String[j];
+		for(int i = 0;i<times.length;i++){
+			if(filterTime(times[i].substring(3, 5))){
+				timeCopy[j-1] = times[i];
+				j--;
+			}
+		}
+		try {
+			if(null == timeCopy[0]){
+			}
+		} catch (Exception e) {
+			Toast.makeText(R_PaymentActivity.this, "预约时间不能超过7天", 1).show();
+			btPay.setEnabled(false);
+			return;
+		}
+		times = timeCopy;
 		person1Adapter = new ArrayAdapter<String>(R_PaymentActivity.this,
 				android.R.layout.simple_spinner_item, times);
 		person1.setAdapter(person1Adapter);
 		person1.setSelection(0, true);
+		if(getTime(times[0])){
+			ampm = am;
+		}else{
+			ampm = pm;
+		}
+		ampmAdapter = new ArrayAdapter<String>(R_PaymentActivity.this,
+				android.R.layout.simple_spinner_item, ampm);
+		spHour.setAdapter(ampmAdapter);
+		spHour.setSelection(0, true);
 	}
 
 	private void dohandler() {
-		// TODO Auto-generated method stub
-		R_PHandler = new AsyncHttpResponseHandler() {
+		new AsyncHttpResponseHandler() {
 			@Override
 			public void onFailure(Throwable arg0, String arg1) {
 				Toast.makeText(R_PaymentActivity.this, "网络连接错误，请检查网络设置后重试。",
@@ -303,6 +344,20 @@ public class R_PaymentActivity extends BaseActivity {
 	@ItemSelect(R.id.person1)
 	public void spinner(boolean selected, int position) {
 		Position = position; // 记录当前序号，留给下面适配器时用
+		if(getTime(times[0])){
+			ampm = am;
+			ampmAdapter.notifyDataSetChanged();
+		}else{
+			ampm = pm;
+			ampmAdapter.notifyDataSetChanged();
+		}
+		spHour.setSelection(0, true);
+	}
+	
+	@ItemSelect(R.id.spHour)
+	public void spinner1(boolean selected, int position) {
+		position1 = position; // 记录当前序号，留给下面适配器时用
+		
 	}
 
 	@Click({ R.id.ibtnBack, R.id.btPay })
@@ -346,8 +401,10 @@ public class R_PaymentActivity extends BaseActivity {
 				r_pay.setPhone(tvTel.getText().toString());
 				r_pay.setIC(tvId.getText().toString());
 				r_pay.setDname(tvDepartment.getText().toString());
+//				r_pay.setRTime(year + "-" + month + "-" + monthday + " "
+//						+ ampm[Position]);
 				r_pay.setRTime(year + "-" + month + "-" + monthday + " "
-						+ ampm[Position]);
+						+ ampm[position1]);
 				r_pay.setPrice((Integer
 						.parseInt(tvCost
 								.getText()
@@ -378,6 +435,30 @@ public class R_PaymentActivity extends BaseActivity {
 			}
 		}
 	}
+
+	/**
+	 * 显示上午或下午的时间
+	 * @param time
+	 * @return
+	 */
+	private boolean getTime(String time){
+		String s = time.substring(11, 13);
+		if("上午".equals(s)){
+			return true;
+		}
+		return false;
+		
+	}
+
+	public boolean filterTime(String day){
+		String nowTime=Tools.getTime();
+		int dayNow = Integer.parseInt(nowTime.substring(8, 10));
+		if((dayNow+7) >= Integer.parseInt(day)){
+			return true;
+		}
+		return false;
+	}
+
 	/**
 	 * 
 	 * @ClassName:  ordertime   
