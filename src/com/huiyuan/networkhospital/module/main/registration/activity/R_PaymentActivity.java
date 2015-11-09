@@ -341,6 +341,7 @@ public class R_PaymentActivity extends BaseActivity {
 
 	}
 
+	//小时选择器
 	@ItemSelect(R.id.person1)
 	public void spinner(boolean selected, int position) {
 		Position = position; // 记录当前序号，留给下面适配器时用
