@@ -123,10 +123,10 @@ public class ScAdapter extends BaseAdapter {
 			viewHolder.address.setText("教练确认完成");
 			break;
 		case "2":
-			viewHolder.address.setText("用户确认完成");
+			viewHolder.address.setText("已结束");
 			break;
 		case "3":
-			viewHolder.address.setText("聊天进行中");
+			viewHolder.address.setText("聊天中");
 			ArrayList<ReminderCount> rcs = PreventionFragment.rcs;
 			String c ="c"+person.getcPhone();
 			for(int i = 0;i<PreventionFragment.rcs.size();i++){

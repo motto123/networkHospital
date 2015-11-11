@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.huiyuan.networkhospital"
     android:versionCode="2"
-    android:versionName="1.0" >
+    android:versionName="1.1" >
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -726,6 +726,7 @@
             android:label="@string/title_activity_check" >
         </activity>
         
+         <!-- 蒲公英start -->
          <!-- 可选 -->
         <activity android:name="com.pgyersdk.activity.FeedbackActivity" />
 
@@ -734,6 +735,7 @@
             android:name="PGYER_APPID"
             android:value="56e6569bd933ff88b5f864e9aae7861a" >
         </meta-data>
+         <!-- 蒲公英end -->
         
     </application>
 

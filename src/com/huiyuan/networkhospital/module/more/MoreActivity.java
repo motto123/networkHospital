@@ -86,7 +86,7 @@ public class MoreActivity extends Activity {
 					Intent.EXTRA_TEXT,
 					"我正在用《知了健康》"
 //							+ "http://118.112.183.197:9111/imgserver/APK/SportAssistant.apk"
-							+""
+							+"http://www.pgyer.com/apiv1/app/install?aId=56e6569bd933ff88b5f864e9aae7861a&_api_key=f7fcbe282a775f6f4301eb037fcf2535"
 							+ "");
 			startActivity(Intent.createChooser(intent2, "知了健康"));
 
