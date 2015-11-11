@@ -251,4 +251,25 @@
                 android:textSize="18sp" />
 
         </RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_below="@+id/rlMore"
+    android:layout_marginTop="14dp"
+    android:background="#FFFFFF" >
+
+    <TextView
+        android:id="@+id/tvIntroduce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:text="@string/coach_introduce" />
+
+</RelativeLayout>
+
 </RelativeLayout>

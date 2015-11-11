@@ -198,6 +198,7 @@
     <string name="title_activity_dv__chose_address_detailes">Dv_ChoseAddressDetailesActivity</string>
     <string name="center_introduce">治未病中心介绍</string>
     <string name="doctor_introduce">医生介绍</string>
+    <string name="coach_introduce">教练介绍：</string>
     <string name="course_introduce">治疗科目介绍</string>
     <string name="item_dv_choseaddress">四川省成都市青羊区\n家园南街12号蓝钻会所</string>
     <string name="title_activity_my">MyActivity</string>

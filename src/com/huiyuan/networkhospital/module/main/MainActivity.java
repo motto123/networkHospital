@@ -38,6 +38,7 @@ import com.huiyuan.networkhospital.common.util.Tools;
 import com.huiyuan.networkhospital.common.widget.BadgeView;
 import com.huiyuan.networkhospital.module.main.fragment.PreventionFragment_;
 import com.huiyuan.networkhospital.module.main.fragment.UserFragment_;
+import com.huiyuan.networkhospital.module.main.fragment.testFragment_;
 import com.huiyuan.networkhospital.module.more.MoreActivity_;
 import com.huiyuan.networkhospital.module.user.UserInfoActivity_;
 import com.pgyersdk.update.PgyUpdateManager;
@@ -102,7 +103,7 @@ public class MainActivity extends FragmentActivity {
 				fs.add(new PreventionFragment_());
 //				fs.add(new testFragment_());
 //				fs.add(new FindFragment_());
-//				fs.add(new testFragment_());
+				fs.add(new testFragment_());
 				fs.add(new UserFragment_());
 				MyPagerAdapter adapter=new MyPagerAdapter(fm, fs);
 				viewPager.setAdapter(adapter);
@@ -121,21 +122,25 @@ public class MainActivity extends FragmentActivity {
 					updateFontColor(0);
 					break;
 				case 1:
-					radio2.setChecked(true);
-					updateFontColor(4);
-					/*if (key1) {
+					if (key1) {
 						viewPager.setCurrentItem(2);
-						updateFontColor(2);
+						updateFontColor(4);
+//						viewPager.setCurrentItem(2);
+//						updateFontColor(2);
 					}else {
 						viewPager.setCurrentItem(0);
 						updateFontColor(0);
-					}*/
+					}
 					break;
 				case 2:
-					radio1.setChecked(true);
+					radio2.setChecked(true);
+					updateFontColor(4);
 					key1=false;
-					key2=true;
-					updateFontColor(2);
+					
+//					radio1.setChecked(true);
+//					key1=false;
+//					key2=true;
+//					updateFontColor(2);
 
 					break;
 				case 3:

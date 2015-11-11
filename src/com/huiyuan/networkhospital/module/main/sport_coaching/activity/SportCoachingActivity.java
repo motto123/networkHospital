@@ -245,6 +245,7 @@ public class SportCoachingActivity extends BaseActivity {
 
 			@Override
 			public void onSuccess(String arg0) {
+				Tools.LogE("复诊拿药列表："+arg0);
 				try {
 					JSONObject jsonObject = new JSONObject(arg0);
 					Gson gson = new Gson();

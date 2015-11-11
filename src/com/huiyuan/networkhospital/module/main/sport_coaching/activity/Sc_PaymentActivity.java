@@ -47,6 +47,8 @@ public class Sc_PaymentActivity extends BaseActivity {
 	TextView tvScTotal;
 	@ViewById
 	ImageView ivMore1;
+	@ViewById
+	TextView tvIntroduce;
 	
 	public String path;
 	static Context context;
@@ -63,7 +65,8 @@ public class Sc_PaymentActivity extends BaseActivity {
 		context=Sc_PaymentActivity.this;
 		Intent getidIntent =getIntent();
 		bean = (SportSelect) getidIntent.getSerializableExtra("bean");	
-
+		tvIntroduce.setText(getResources().getString(R.string.coach_introduce)+
+				bean.getDescription());
 		textView4.setText(bean.getName());
 		tvTime.setText(bean.getPrice()+"元");
 		tvScTotal.setText(bean.getPrice()+"元");
