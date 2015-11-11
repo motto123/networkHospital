@@ -437,7 +437,9 @@ public class MessageAdapter extends BaseAdapter{
 				((ChatMainActivity)activity).createDialog();
 			}else if("CoachRequestFinshSI".equals(NApplication.cmd)){
 				((ChatMainActivity)activity).createDialog1();
-			}
+			}else if("forcedEnd".equals(NApplication.cmd)){
+				((ChatMainActivity)activity).createDialog2();
+				}
 			NApplication.cmd = null;
 		}
 

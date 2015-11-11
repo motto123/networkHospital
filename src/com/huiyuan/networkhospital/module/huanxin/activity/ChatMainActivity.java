@@ -92,6 +92,7 @@ import com.google.gson.reflect.TypeToken;
 import com.huiyuan.networkhospital.NApplication;
 import com.huiyuan.networkhospital.R;
 import com.huiyuan.networkhospital.common.util.ExceptionUtil;
+import com.huiyuan.networkhospital.common.util.HttpClientUtils;
 import com.huiyuan.networkhospital.common.util.Tools;
 import com.huiyuan.networkhospital.constant.GlobalConstant;
 import com.huiyuan.networkhospital.constant.Url;
@@ -116,7 +117,7 @@ import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
 public class ChatMainActivity extends Activity implements OnClickListener,
-		EMEventListener {
+EMEventListener {
 
 	private static final String TAG = "ChatMainActivity";
 	private static final int REQUEST_CODE_EMPTY_HISTORY = 2;
@@ -356,10 +357,10 @@ public class ChatMainActivity extends Activity implements OnClickListener,
 			public void onFocusChange(View v, boolean hasFocus) {
 				if (hasFocus) {
 					edittext_layout
-							.setBackgroundResource(R.drawable.input_bar_bg_active);
+					.setBackgroundResource(R.drawable.input_bar_bg_active);
 				} else {
 					edittext_layout
-							.setBackgroundResource(R.drawable.input_bar_bg_normal);
+					.setBackgroundResource(R.drawable.input_bar_bg_normal);
 				}
 
 			}
@@ -369,7 +370,7 @@ public class ChatMainActivity extends Activity implements OnClickListener,
 			@Override
 			public void onClick(View v) {
 				edittext_layout
-						.setBackgroundResource(R.drawable.input_bar_bg_active);
+				.setBackgroundResource(R.drawable.input_bar_bg_active);
 				more.setVisibility(View.GONE);
 				iv_emoticons_normal.setVisibility(View.VISIBLE);
 				iv_emoticons_checked.setVisibility(View.INVISIBLE);
@@ -455,7 +456,7 @@ public class ChatMainActivity extends Activity implements OnClickListener,
 									ChatMainActivity.this,
 									getResources().getString(
 											R.string.no_more_messages),
-									Toast.LENGTH_SHORT).show();
+											Toast.LENGTH_SHORT).show();
 						}
 						swipeRefreshLayout.setRefreshing(false);
 					}
@@ -649,45 +650,45 @@ public class ChatMainActivity extends Activity implements OnClickListener,
 		EMChatManager.getInstance().joinChatRoom(toChatUsername,
 				new EMValueCallBack<EMChatRoom>() {
 
+			@Override
+			public void onSuccess(EMChatRoom value) {
+				// TODO Auto-generated method stub
+				runOnUiThread(new Runnable() {
 					@Override
-					public void onSuccess(EMChatRoom value) {
-						// TODO Auto-generated method stub
-						runOnUiThread(new Runnable() {
-							@Override
-							public void run() {
-								pd.dismiss();
-								room = EMChatManager.getInstance().getChatRoom(
-										toChatUsername);
-								if (room != null) {
-									((TextView) findViewById(R.id.name))
-											.setText(room.getName());
-								} else {
-									((TextView) findViewById(R.id.name))
-											.setText(toChatUsername);
-								}
-								EMLog.d(TAG,
-										"join room success : " + room.getName());
+					public void run() {
+						pd.dismiss();
+						room = EMChatManager.getInstance().getChatRoom(
+								toChatUsername);
+						if (room != null) {
+							((TextView) findViewById(R.id.name))
+							.setText(room.getName());
+						} else {
+							((TextView) findViewById(R.id.name))
+							.setText(toChatUsername);
+						}
+						EMLog.d(TAG,
+								"join room success : " + room.getName());
 
-								onConversationInit();
+						onConversationInit();
 
-								onListViewCreation();
-							}
-						});
-					}
-
-					@Override
-					public void onError(final int error, String errorMsg) {
-						// TODO Auto-generated method stub
-						EMLog.d(TAG, "join room failure : " + error);
-						runOnUiThread(new Runnable() {
-							@Override
-							public void run() {
-								pd.dismiss();
-							}
-						});
-						finish();
+						onListViewCreation();
 					}
 				});
+			}
+
+			@Override
+			public void onError(final int error, String errorMsg) {
+				// TODO Auto-generated method stub
+				EMLog.d(TAG, "join room failure : " + error);
+				runOnUiThread(new Runnable() {
+					@Override
+					public void run() {
+						pd.dismiss();
+					}
+				});
+				finish();
+			}
+		});
 	}
 
 	/**
@@ -832,7 +833,7 @@ public class ChatMainActivity extends Activity implements OnClickListener,
 						.getIntExtra("position", -1));
 				addUserToBlacklist(deleteMsg.getFrom());
 			} else if (conversation.getMsgCount() > 0) {
-					adapter.refresh();
+				adapter.refresh();
 				setResult(RESULT_OK);
 			} else if (requestCode == REQUEST_CODE_GROUP_DETAIL) {
 				adapter.refresh();
@@ -928,10 +929,10 @@ public class ChatMainActivity extends Activity implements OnClickListener,
 
 			// 如果是当前会话的消息，刷新聊天页面
 			if (username.equals(getToChatUsername())) {
-					refreshUIWithNewMessage();
+				refreshUIWithNewMessage();
 				// 声音和震动提示有新消息
 				HXSDKHelper.getInstance().getNotifier()
-						.viberateAndPlayTone(message);
+				.viberateAndPlayTone(message);
 			} else {
 				// 如果消息不是和当前聊天ID的消息
 				HXSDKHelper.getInstance().getNotifier().onNewMsg(message);
@@ -942,20 +943,20 @@ public class ChatMainActivity extends Activity implements OnClickListener,
 		case EventDeliveryAck: {
 			// 获取到message
 			EMMessage message = (EMMessage) event.getData();
-				refreshUI();
+			refreshUI();
 			break;
 		}
 		case EventReadAck: {
 			// 获取到message
 			EMMessage message = (EMMessage) event.getData();
-				refreshUI();
+			refreshUI();
 			break;
 		}
 		case EventOfflineMessage: {
 			// a list of offline messages
 			// List<EMMessage> offlineMessages = (List<EMMessage>)
 			// event.getData();
-				refreshUI();
+			refreshUI();
 			break;
 		}
 		default:
@@ -1001,12 +1002,12 @@ public class ChatMainActivity extends Activity implements OnClickListener,
 
 		cameraFile = new File(PathUtil.getInstance().getImagePath(),
 				NApplication.getInstance().getUserName()
-						+ System.currentTimeMillis() + ".jpg");
+				+ System.currentTimeMillis() + ".jpg");
 		cameraFile.getParentFile().mkdirs();
 		startActivityForResult(
 				new Intent(MediaStore.ACTION_IMAGE_CAPTURE).putExtra(
 						MediaStore.EXTRA_OUTPUT, Uri.fromFile(cameraFile)),
-				REQUEST_CODE_CAMERA);
+						REQUEST_CODE_CAMERA);
 	}
 
 	/**
@@ -1396,8 +1397,8 @@ public class ChatMainActivity extends Activity implements OnClickListener,
 				R.string.Whether_to_empty_all_chats);
 		startActivityForResult(
 				new Intent(this, AlertDialog.class)
-						.putExtra("titleIsCancel", true).putExtra("msg", st5)
-						.putExtra("cancel", true), REQUEST_CODE_EMPTY_HISTORY);
+				.putExtra("titleIsCancel", true).putExtra("msg", st5)
+				.putExtra("cancel", true), REQUEST_CODE_EMPTY_HISTORY);
 	}
 
 	/**
@@ -1488,10 +1489,10 @@ public class ChatMainActivity extends Activity implements OnClickListener,
 					wakeLock.acquire();
 					if (VoicePlayClickListener.isPlaying)
 						VoicePlayClickListener.currentPlayListener
-								.stopPlayVoice();
+						.stopPlayVoice();
 					recordingContainer.setVisibility(View.VISIBLE);
 					recordingHint
-							.setText(getString(R.string.move_up_to_cancel));
+					.setText(getString(R.string.move_up_to_cancel));
 					recordingHint.setBackgroundColor(Color.TRANSPARENT);
 					voiceRecorder.startRecording(null, toChatUsername,
 							getApplicationContext());
@@ -1512,12 +1513,12 @@ public class ChatMainActivity extends Activity implements OnClickListener,
 			case MotionEvent.ACTION_MOVE: {
 				if (event.getY() < 0) {
 					recordingHint
-							.setText(getString(R.string.release_to_cancel));
+					.setText(getString(R.string.release_to_cancel));
 					recordingHint
-							.setBackgroundResource(R.drawable.recording_text_hint_bg);
+					.setBackgroundResource(R.drawable.recording_text_hint_bg);
 				} else {
 					recordingHint
-							.setText(getString(R.string.move_up_to_cancel));
+					.setText(getString(R.string.move_up_to_cancel));
 					recordingHint.setBackgroundColor(Color.TRANSPARENT);
 				}
 				return true;
@@ -1544,7 +1545,7 @@ public class ChatMainActivity extends Activity implements OnClickListener,
 						if (length > 0) {
 							sendVoice(voiceRecorder.getVoiceFilePath(),
 									voiceRecorder
-											.getVoiceFileName(toChatUsername),
+									.getVoiceFileName(toChatUsername),
 									Integer.toString(length), false);
 						} else if (length == EMError.INVALID_FILE) {
 							Toast.makeText(getApplicationContext(), st1,
@@ -1626,15 +1627,15 @@ public class ChatMainActivity extends Activity implements OnClickListener,
 										if (SmileUtils.containsKey(cs
 												.toString()))
 											mEditTextContent.getEditableText()
-													.delete(i, selectionStart);
+											.delete(i, selectionStart);
 										else
 											mEditTextContent.getEditableText()
-													.delete(selectionStart - 1,
-															selectionStart);
+											.delete(selectionStart - 1,
+													selectionStart);
 									} else {
 										mEditTextContent.getEditableText()
-												.delete(selectionStart - 1,
-														selectionStart);
+										.delete(selectionStart - 1,
+												selectionStart);
 									}
 								}
 							}
@@ -1920,13 +1921,13 @@ public class ChatMainActivity extends Activity implements OnClickListener,
 		case TXT:
 			// 获取消息内容，发送消息
 			String content = ((TextMessageBody) forward_msg.getBody())
-					.getMessage();
+			.getMessage();
 			sendText(content);
 			break;
 		case IMAGE:
 			// 发送图片
 			String filePath = ((ImageMessageBody) forward_msg.getBody())
-					.getLocalUrl();
+			.getLocalUrl();
 			if (filePath != null) {
 				File file = new File(filePath);
 				if (!file.exists()) {
@@ -2009,33 +2010,33 @@ public class ChatMainActivity extends Activity implements OnClickListener,
 		builder.setPositiveButton("进入付款",
 				new android.content.DialogInterface.OnClickListener() {
 
-					@Override
-					public void onClick(DialogInterface dialog, int which) {
-						Intent intent = new Intent(ChatMainActivity.this,
-								Gm_PaymentActivity_.class);
-						intent.putExtra(GlobalConstant.KEY_DATA,
-								MUserData.getId());
-						NApplication.way = way;
-						ChatMainActivity.this.startActivity(intent);
-						ChatMainActivity.this.finish();
-					}
-				});
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				Intent intent = new Intent(ChatMainActivity.this,
+						Gm_PaymentActivity_.class);
+				intent.putExtra(GlobalConstant.KEY_DATA,
+						MUserData.getId());
+				NApplication.way = way;
+				ChatMainActivity.this.startActivity(intent);
+				ChatMainActivity.this.finish();
+			}
+		});
 		builder.setNegativeButton("离开聊天",
 				new android.content.DialogInterface.OnClickListener() {
 
-					@Override
-					public void onClick(DialogInterface dialog, int which) {
-						dialog.cancel();
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				dialog.cancel();
 
-						if ("notifyBar".equals(way)) {// 从通知栏进来的
-							Tools.startActivity(ChatMainActivity.this,
-									MainActivity_.class);
-							ChatMainActivity.this.finish();
-						} else {
-							ChatMainActivity.this.finish();
-						}
-					}
-				});
+				if ("notifyBar".equals(way)) {// 从通知栏进来的
+					Tools.startActivity(ChatMainActivity.this,
+							MainActivity_.class);
+					ChatMainActivity.this.finish();
+				} else {
+					ChatMainActivity.this.finish();
+				}
+			}
+		});
 		builder.create().show();
 
 	}
@@ -2056,97 +2057,131 @@ public class ChatMainActivity extends Activity implements OnClickListener,
 		builder.setCancelable(false);
 		builder.setPositiveButton("继续指导",
 				new android.content.DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				dialog.cancel();
+				// 修改运动指导状态id
+				AsyncHttpClient client = new AsyncHttpClient();
+				RequestParams parmas = new RequestParams();
+				parmas.put("act", "mupdate");
+				parmas.put("ID", SUserData.getId());
+				parmas.put("state", "3");
+				client.post(Url.userMovementGuidance, parmas,
+						new AsyncHttpResponseHandler() {
 					@Override
-					public void onClick(DialogInterface dialog, int which) {
-						dialog.cancel();
-						// 修改运动指导状态id
-						AsyncHttpClient client = new AsyncHttpClient();
-						RequestParams parmas = new RequestParams();
-						parmas.put("act", "mupdate");
-						parmas.put("ID", SUserData.getId());
-						parmas.put("state", "3");
-						client.post(Url.userMovementGuidance, parmas,
-								new AsyncHttpResponseHandler() {
-									@Override
-									public void onSuccess(String arg0) {
-										try {
-											JSONObject job = new JSONObject(
-													arg0);
-											if ("true".equals(job
-													.getString("Data"))) {
-												sendText("我还有很多疑问，请再指导一下！");
-											} else {
-												Toast.makeText(
-														ChatMainActivity.this,
-														"服务器异常，系统自动发送失败，请手动发送！",
-														0).show();
-											}
-										} catch (Exception e) {
-											e.printStackTrace();
-										}
-										super.onSuccess(arg0);
-									}	
+					public void onSuccess(String arg0) {
+						try {
+							JSONObject job = new JSONObject(
+									arg0);
+							if ("true".equals(job
+									.getString("Data"))) {
+								sendText("我还有很多疑问，请再指导一下！");
+							} else {
+								Toast.makeText(
+										ChatMainActivity.this,
+										"服务器异常，系统自动发送失败，请手动发送！",
+										0).show();
+							}
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+						super.onSuccess(arg0);
+					}	
 
-									@Override
-									public void onFailure(Throwable arg0,
-											String arg1) {
-										Toast.makeText(ChatMainActivity.this,
-												"服务器异常，请稍候再试！", 0).show();
-										super.onFailure(arg0, arg1);
-									}
-								});
+					@Override
+					public void onFailure(Throwable arg0,
+							String arg1) {
+						Toast.makeText(ChatMainActivity.this,
+								"服务器异常，请稍候再试！", 0).show();
+						super.onFailure(arg0, arg1);
 					}
 				});
+			}
+		});
 		builder.setNegativeButton("同意",
 				new android.content.DialogInterface.OnClickListener() {
 
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				// 修改运动指导状态id
+				dialog.cancel();
+				AsyncHttpClient client = new AsyncHttpClient();
+				RequestParams parmas = new RequestParams();
+				parmas.put("act", "mupdate");
+				parmas.put("ID", SUserData.getId());
+				parmas.put("state", "2");
+				client.post(Url.userMovementGuidance, parmas,
+						new AsyncHttpResponseHandler() {
 					@Override
-					public void onClick(DialogInterface dialog, int which) {
-						// 修改运动指导状态id
-						dialog.cancel();
-						AsyncHttpClient client = new AsyncHttpClient();
-						RequestParams parmas = new RequestParams();
-						parmas.put("act", "mupdate");
-						parmas.put("ID", SUserData.getId());
-						parmas.put("state", "2");
-						client.post(Url.userMovementGuidance, parmas,
-								new AsyncHttpResponseHandler() {
-									@Override
-									public void onSuccess(String arg0) {
-										try {
-											JSONObject job = new JSONObject(
-													arg0);
-											if ("true".equals(job
-													.getString("Data"))) {
-												sendText("此次指导已完成！");
-												NApplication.way = way;
-												// 跳转评价页面
-												Tools.startActivity(ChatMainActivity.this,com.huiyuan.networkhospital.module.main.sport_coaching.activity.EvaluateActivity_.class);
-												
-												ChatMainActivity.this.finish();
-											} else {
-												Toast.makeText(
-														ChatMainActivity.this,
-														"服务器异常，请稍候再试！", 0)
-														.show();
-											}
-										} catch (Exception e) {
-											e.printStackTrace();
-										}
-										super.onSuccess(arg0);
-									}
+					public void onSuccess(String arg0) {
+						try {
+							JSONObject job = new JSONObject(
+									arg0);
+							if ("true".equals(job
+									.getString("Data"))) {
+								sendText("此次指导已完成！");
+								NApplication.way = way;
+								// 跳转评价页面
+								Tools.startActivity(ChatMainActivity.this,com.huiyuan.networkhospital.module.main.sport_coaching.activity.EvaluateActivity_.class);
 
-									@Override
-									public void onFailure(Throwable arg0,
-											String arg1) {
-										Toast.makeText(ChatMainActivity.this,
-												"服务器异常，请稍候再试！", 0).show();
-										super.onFailure(arg0, arg1);
-									}
-								});
+								ChatMainActivity.this.finish();
+							} else {
+								Toast.makeText(
+										ChatMainActivity.this,
+										"服务器异常，请稍候再试！", 0)
+										.show();
+							}
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+						super.onSuccess(arg0);
+					}
+
+					@Override
+					public void onFailure(Throwable arg0,
+							String arg1) {
+						Toast.makeText(ChatMainActivity.this,
+								"服务器异常，请稍候再试！", 0).show();
+						super.onFailure(arg0, arg1);
 					}
 				});
+			}
+		});
 		builder.create().show();
+	}
+
+	/**
+	 * 强制结束会话
+	 */
+	public void createDialog2() {
+		android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(
+				this);
+		builder.setTitle("温馨提示");
+		if('d' == NApplication.role){
+			builder.setMessage("医生强制结束了会话!");
+		}else{
+			builder.setMessage("教练强制结束了会话!");
+		}
+		builder.setIcon(R.drawable.ic_app_user);
+		builder.setCancelable(false);
+		builder.setNegativeButton("离开",
+				new android.content.DialogInterface.OnClickListener() {
+
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				dialog.cancel();
+
+				if ("notifyBar".equals(way)) {// 从通知栏进来的
+					Tools.startActivity(ChatMainActivity.this,
+							MainActivity_.class);
+					ChatMainActivity.this.finish();
+				} else {
+					ChatMainActivity.this.finish();
+				}
+			}
+		});
+		builder.create().show();
+
 	}
 
 	private void dohandler() {

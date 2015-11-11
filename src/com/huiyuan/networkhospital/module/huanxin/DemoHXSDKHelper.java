@@ -163,8 +163,8 @@ public class DemoHXSDKHelper extends HXSDKHelper{
 				case EventNewMessage:
 					String content = message.getBody().toString().substring(5, message.getBody().toString().length()-1);
 //					MainActivity.bd.incrementBadgeCount(1);
-					//应用在后台，不需要刷新UI,通知栏提示新消息
-					if("医生已开药".equals(content)){
+					if("医生已开药".equals(content)||"医生强制结束了会话".equals(content)||
+							"教练强制结束了会话".equals(content)){
 						try {
 							EMChatManager.getInstance().ackMessageRead(message.getFrom(), message.getMsgId());
 							// 发送已读回执
@@ -175,6 +175,7 @@ public class DemoHXSDKHelper extends HXSDKHelper{
 							e.printStackTrace();
 						}
 					}
+					//应用在后台，不需要刷新UI,通知栏提示新消息
 					if(activityList.size() <= 0){
 						HXSDKHelper.getInstance().getNotifier().onNewMsg(message);
 					}
