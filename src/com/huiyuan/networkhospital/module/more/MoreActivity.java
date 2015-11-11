@@ -85,7 +85,8 @@ public class MoreActivity extends Activity {
 			intent2.putExtra(
 					Intent.EXTRA_TEXT,
 					"我正在用《知了健康》"
-							+ "http://118.112.183.197:9111/imgserver/APK/SportAssistant.apk"
+//							+ "http://118.112.183.197:9111/imgserver/APK/SportAssistant.apk"
+							+""
 							+ "");
 			startActivity(Intent.createChooser(intent2, "知了健康"));
 
