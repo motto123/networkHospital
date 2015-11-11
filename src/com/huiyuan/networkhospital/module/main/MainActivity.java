@@ -36,12 +36,11 @@ import com.huiyuan.networkhospital.R;
 import com.huiyuan.networkhospital.common.fragmentanimation.DepthPageTransformer;
 import com.huiyuan.networkhospital.common.util.Tools;
 import com.huiyuan.networkhospital.common.widget.BadgeView;
-import com.huiyuan.networkhospital.module.main.fragment.FindFragment_;
 import com.huiyuan.networkhospital.module.main.fragment.PreventionFragment_;
 import com.huiyuan.networkhospital.module.main.fragment.UserFragment_;
-import com.huiyuan.networkhospital.module.main.fragment.testFragment_;
 import com.huiyuan.networkhospital.module.more.MoreActivity_;
 import com.huiyuan.networkhospital.module.user.UserInfoActivity_;
+import com.pgyersdk.update.PgyUpdateManager;
 
 @SuppressLint("ShowToast")
 @EActivity(R.layout.activity_main)
@@ -78,6 +77,7 @@ public class MainActivity extends FragmentActivity {
 		((NApplication)this.getApplication()).addActivity(this);
 		//		setContentView(R.layout.activity_main);
 		activityInstance = this;
+		PgyUpdateManager.register(this);//蒲公英版本更新
 	}
 	
 	/**
@@ -100,9 +100,9 @@ public class MainActivity extends FragmentActivity {
 				//构建Fragment的集合
 				final List<Fragment> fs=new ArrayList<Fragment>();
 				fs.add(new PreventionFragment_());
-				fs.add(new testFragment_());
-				fs.add(new FindFragment_());
-				fs.add(new testFragment_());
+//				fs.add(new testFragment_());
+//				fs.add(new FindFragment_());
+//				fs.add(new testFragment_());
 				fs.add(new UserFragment_());
 				MyPagerAdapter adapter=new MyPagerAdapter(fm, fs);
 				viewPager.setAdapter(adapter);
@@ -121,13 +121,15 @@ public class MainActivity extends FragmentActivity {
 					updateFontColor(0);
 					break;
 				case 1:
-					if (key1) {
+					radio2.setChecked(true);
+					updateFontColor(4);
+					/*if (key1) {
 						viewPager.setCurrentItem(2);
 						updateFontColor(2);
 					}else {
 						viewPager.setCurrentItem(0);
 						updateFontColor(0);
-					}
+					}*/
 					break;
 				case 2:
 					radio1.setChecked(true);
@@ -148,6 +150,8 @@ public class MainActivity extends FragmentActivity {
 				case 4:
 					key2=false;
 					radio2.setChecked(true);
+					updateFontColor(4);
+					viewPager.setCurrentItem(4);
 					updateFontColor(4);
 					break;
 				}

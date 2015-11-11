@@ -50,8 +50,9 @@
         android:layout_alignParentLeft="true"
         android:background="#e6e6e6"
         android:orientation="horizontal"
-        android:weightSum="1.5"
+        android:weightSum="1" 
         android:paddingTop="6dp" >
+         <!-- android:weightSum="1.5" -->
 
         <RadioButton
             android:id="@+id/radio0"
@@ -75,7 +76,8 @@
             android:gravity="center"
             android:text="@string/find"
             android:textColor="#727272"
-            android:textSize="14sp" />
+            android:textSize="14sp" 
+            android:visibility="gone"/>
 
         <RadioButton
             android:id="@+id/radio2"

@@ -21,6 +21,7 @@ import com.huiyuan.networkhospital.entity.zlk.MUserData;
 import com.huiyuan.networkhospital.entity.zlk.ReminderCount;
 import com.huiyuan.networkhospital.entity.zlk.SUserData;
 import com.huiyuan.networkhospital.module.huanxin.DemoHXSDKHelper;
+import com.pgyersdk.crash.PgyCrashManager;
 
 public class NApplication extends Application {
 
@@ -120,6 +121,7 @@ public class NApplication extends Application {
 	public void onCreate() {
 		super.onCreate();
 		LogcatHelper.getInstance(this).start();
+		PgyCrashManager.register(this);//蒲公英异常上传
 		NApplication.context=getApplicationContext();
 		AllAcivity = new ArrayList<Map<String, String>>();
 		applicationContext = this;
