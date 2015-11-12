@@ -217,7 +217,6 @@ public class R_PaymentActivity extends BaseActivity {
 		ampmAdapter = new ArrayAdapter<String>(R_PaymentActivity.this,
 				android.R.layout.simple_spinner_item, ampm);
 		spHour.setAdapter(ampmAdapter);
-		spHour.setSelection(0, true);
 	}
 
 	private void dohandler() {
@@ -345,14 +344,15 @@ public class R_PaymentActivity extends BaseActivity {
 	@ItemSelect(R.id.person1)
 	public void spinner(boolean selected, int position) {
 		Position = position; // 记录当前序号，留给下面适配器时用
-		if(getTime(times[0])){
+		if(getTime(times[position])){
 			ampm = am;
-			ampmAdapter.notifyDataSetChanged();
 		}else{
 			ampm = pm;
-			ampmAdapter.notifyDataSetChanged();
 		}
-		spHour.setSelection(0, true);
+		ampmAdapter = new ArrayAdapter<String>(R_PaymentActivity.this,
+				android.R.layout.simple_spinner_item, ampm);
+		spHour.setAdapter(ampmAdapter);
+//		ampmAdapter.notifyDataSetChanged();
 	}
 	
 	@ItemSelect(R.id.spHour)

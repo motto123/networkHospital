@@ -114,6 +114,9 @@ public class SelectCAdapter extends BaseAdapter {
 			// Log.e("path",path );
 			// MYTask myTask = new MYTask(context,convertView);
 			// myTask.execute(path);
+		}else{
+			((CircularImage) convertView
+					.findViewById(R.id.img_gm_ing_item)).setImageResource(R.drawable.ic_head_base);
 		}
 		/*
 		 * 添加监听

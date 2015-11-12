@@ -1,63 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="80dp"
+    android:layout_height="wrap_content"
     android:background="@drawable/bg_white_gray_straight"
     android:orientation="vertical"
-    android:paddingTop="10dp"
-     >
-	<ImageView 
-	    android:id="@+id/ivTutorialVideo"
-	    android:layout_height="60dp"
-	    android:layout_width="75dp"
-	    android:layout_marginLeft="8dp"
-	    android:layout_centerVertical="true"
-	    android:src="@drawable/test_ic_course_video"
-	    />
-   <RelativeLayout 
-       android:id="@+id/rlytTutorialText"
-       android:layout_width="200dp"
-       android:layout_height="60dp"
-       android:layout_marginLeft="14dp"
-       android:layout_toRightOf="@id/ivTutorialVideo"
-	android:layout_centerVertical="true"
-	>
-       <TextView 
-           android:id="@+id/tvTutorialTextTitle"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:textSize="18sp"
-           android:textColor="#3b3b3b"
-           android:text="@string/rehabilitationTutorialTitle"
-           />
-       <TextView 
-           android:id="@+id/tvTutorialTextContents"
-           android:layout_width="185dp"
-           android:layout_height="22dp"
-           android:layout_below="@id/tvTutorialTextTitle"
-           android:textSize="10sp"
-           android:text="@string/tvTutorialTextContents"
-           />
-        <TextView 
-           android:id="@+id/tvTutorialTextTime"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_below="@id/tvTutorialTextContents"
-           android:textSize="10sp"
-           android:layout_marginBottom="1dp"
-           android:text="2015年5月26日"
-           />
-   </RelativeLayout>
+    android:paddingTop="10dp" >
 
-   <ImageButton
-       android:id="@+id/ivTutorialGo"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_alignParentRight="true"
-       android:layout_centerVertical="true"
-       android:layout_marginRight="15dp"
-       android:focusable="false"
-       android:background="@null"
-       android:src="@drawable/ic_right_arrow22px40px" />
+    <ImageView
+        android:id="@+id/ivTutorialVideo"
+        android:layout_width="75dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/test_ic_course_video" />
+
+    <RelativeLayout
+        android:id="@+id/rlytTutorialText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="14dp"
+        android:layout_toLeftOf="@+id/ivTutorialGo"
+        android:layout_toRightOf="@id/ivTutorialVideo" >
+
+        <TextView
+            android:id="@+id/tvTutorialTextTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rehabilitationTutorialTitle"
+            android:textColor="#3b3b3b"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTutorialTextContents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTutorialTextTitle"
+            android:text="@string/tvTutorialTextContents"
+            android:lines="2"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tvTutorialTextTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTutorialTextContents"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="3dp"
+            android:text="2015年5月26日"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/ivTutorialGo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:background="@null"
+        android:focusable="false"
+        android:src="@drawable/ic_right_arrow22px40px" />
 
 </RelativeLayout>
